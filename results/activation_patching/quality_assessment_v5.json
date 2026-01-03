@@ -1,0 +1,1564 @@
+{
+  "strategies": [
+    {
+      "config": {
+        "name": "prompt_all",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "patch_mode": "prompt_all",
+        "max_patch_steps": null,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 69.3,
+        "avg_marker_reduction": 1.6,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. We start with 7.\n2. We add 5 to it.\n3. 7 + 5 = 12\n\nSo, the answer is 12.",
+            "tokens": 47,
+            "reasoning_markers": 3,
+            "extracted_answer": "12.",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 54,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To determine how much money Sarah has left after spending $8, we need to subtract the amount she spent from the total amount she initially had.\n\n1. Sarah starts with $20.\n2. She spends $8.\n\nNow, we subtract the amount spent from the initial amount:\n\n$20 - $8 = $12\n\nSo, after spending $8, Sarah has $12 left.",
+            "tokens": 83,
+            "reasoning_markers": 2,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 11,
+            "marker_reduction": 3,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the product of 6 and 4, we can use the multiplication operation:\n\n6 \u00d7 4 = 24\n\nSo, 6 times 4 equals 24.",
+            "tokens": 40,
+            "reasoning_markers": 2,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 103,
+            "marker_reduction": 3,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the area of a square, we use the formula:\n\n\\[ \\text{Area} = \\text{side length} \\times \\text{side length} \\]\n\nGiven that the side length of the square is 5, we can substitute this value into the formula:\n\n\\[ \\text{Area} = 5 \\times 5 \\]\n\nNow, let's perform the multiplication:\n\n\\[ \\text{Area} = 25 \\]\n\nSo, the area of the square is 25 square units.",
+            "tokens": 107,
+            "reasoning_markers": 3,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 93,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To solve for x in the equation 2x = 14, you need to isolate x on one side of the equation. You can do this by dividing both sides of the equation by 2.\n\nSo, you would divide both sides by 2:\n\n2x \u00f7 2 = 14 \u00f7 2\n\nThis simplifies to:\n\nx = 7\n\nTherefore, x = 7.",
+            "tokens": 86,
+            "reasoning_markers": 2,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 114,
+            "marker_reduction": 3,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. We need to divide 100 by 4.\n2. To do this, we can think of it as how many groups of 4 we can make from 100.\n3. If we divide 100 by 4, we get 25 because 4 times 25 equals 100.\n\nSo, 100 divided by 4 is 25.",
+            "tokens": 96,
+            "reasoning_markers": 4,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 104,
+            "marker_reduction": 2,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the third angle in a triangle when two angles are given, we can use the fact that the sum of the angles in any triangle is always 180 degrees.\n\nGiven:\n- One angle is 60 degrees.\n- Another angle is 60 degrees.\n\nLet's denote the third angle as \\( x \\).\n\nThe sum of the angles in a triangle is:\n\\[ 60^\\circ + 60^\\circ + x = 180^\\circ \\]\n\nNow, we can solve for \\( x \\):\n\\[ 120^\\circ + x = 180^\\circ \\]\n\\[ x = 180^\\circ - 120^\\circ \\]\n\\[ x = 60^\\circ \\]\n\nSo, the third angle is also 60 degrees.",
+            "tokens": 169,
+            "reasoning_markers": 3,
+            "extracted_answer": "60",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 31,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Bob originally has 3 apples. Ann gives him 4 more apples. To find out how many apples Bob has in total, we need to add the number of apples Ann gave him to the number of apples Bob already had.\n\nSo, we add 3 (the number of apples Bob originally had) and 4 (the number of apples Ann gave him):\n\n3 + 4 = 7\n\nTherefore, Bob now has 7 apples.",
+            "tokens": 91,
+            "reasoning_markers": 3,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 58,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "The square root of a number is a value that, when multiplied by itself, gives the original number. For 49, we are looking for a number that, when squared, equals 49.\n\nLet's consider the possible values:\n- If we take 7, then \\(7 \\times 7 = 49\\).\n- If we take -7, then \\((-7) \\times (-7) = 49\\).\n\nHowever, by convention, the square root of a positive number is always considered to be the positive value. Therefore, the principal (or positive) square root of 49 is 7.\n\nSo, the square root of 49 is 7.",
+            "tokens": 145,
+            "reasoning_markers": 6,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 55,
+            "marker_reduction": -1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To solve for x in the equation 5 + x = 13, we need to isolate x on one side of the equation. We can do this by subtracting 5 from both sides of the equation:\n\n5 + x - 5 = 13 - 5\n\nThis simplifies to:\n\nx = 8\n\nSo, x = 8.",
+            "tokens": 76,
+            "reasoning_markers": 2,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 70,
+            "marker_reduction": 2,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "prompt_tail_20",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "patch_mode": "prompt_tail_20",
+        "max_patch_steps": null,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 0.0,
+        "avg_marker_reduction": 0.0,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 0.5,
+        "maintained_accuracy": 0.5,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "prompt_tail_10",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "patch_mode": "prompt_tail_10",
+        "max_patch_steps": null,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 0.0,
+        "avg_marker_reduction": 0.0,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 0.5,
+        "maintained_accuracy": 0.5,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "prompt_all_steps_10",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "patch_mode": "prompt_all",
+        "max_patch_steps": 10,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 9.0,
+        "avg_marker_reduction": 1.3,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer is 12.",
+            "tokens": 92,
+            "reasoning_markers": 3,
+            "extracted_answer": "12.",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 9,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To determine how much money Sarah has left after spending $8, we can follow these steps:\n\n1. **Identify the initial amount of money Sarah has:**\n   Sarah starts with $20.\n\n2. **Identify the amount of money Sarah spends:**\n   Sarah spends $8.\n\n3. **Subtract the amount spent from the initial amount:**\n   $20 - $8 = $12\n\nSo, after spending $8, Sarah has $12 left.",
+            "tokens": 101,
+            "reasoning_markers": 3,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -7,
+            "marker_reduction": 2,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the product of 6 and 4, I'll follow these steps:\n\n1. **Identify the numbers**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 multiplied by 4 is the same as adding 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n4. **Verify the result**: We can check our answer by using the commutative property of multiplication, which states that the order of the numbers doesn't matter. 4 times 6 is also 24.\n\nTherefore, 6 times 4 equals 24.",
+            "tokens": 158,
+            "reasoning_markers": 4,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -15,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the area of a square, we use the formula:\n\n\\[ \\text{Area} = \\text{side length} \\times \\text{side length} \\]\n\nGiven that the side length of the square is 5, we can substitute this value into the formula:\n\n\\[ \\text{Area} = 5 \\times 5 \\]\n\nNow, let's perform the multiplication:\n\n\\[ 5 \\times 5 = 25 \\]\n\nTherefore, the area of the square is 25 square units.",
+            "tokens": 108,
+            "reasoning_markers": 3,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 92,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To solve for x in the equation 2x = 14, we need to isolate x on one side of the equation. Here's the step-by-step reasoning:\n\n1. **Identify the equation**: We have the equation 2x = 14.\n\n2. **Understand what we need to do**: We need to find the value of x that makes the equation true.\n\n3. **Isolate x**: To do this, we need to divide both sides of the equation by 2. This is because 2 is the coefficient of x, and dividing by 2 will cancel it out on the left side.\n\n4. **Perform the division**: \n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n5. **Simplify**: \n   \\[\n   x = 7\n   \\]\n\nSo, the value of x that satisfies the equation 2x = 14 is 7",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. **Understanding the Division**: Division is the process of splitting a number into equal parts. In this case, we are splitting 100 into 4 equal parts.\n\n2. **Setting Up the Problem**: We need to divide 100 by 4. This can be written as:\n   \\[\n   100 \\div 4\n   \\]\n\n3. **Performing the Division**:\n   - Start with 100 and ask how many times 4 can fit into it.\n   - 4 fits into 100 twenty-five times because \\(4 \\times 25 = 100\\).\n\n4. **Verification**:\n   - To verify, we can multiply 4 by 25 to ensure we get 100:\n     \\[\n     4 \\times 25 = 100\n     \\]\n   - This confirms that 4 fits",
+            "tokens": 200,
+            "reasoning_markers": 3,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 3,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the third angle in a triangle when two angles are given, we can use the fact that the sum of the interior angles of any triangle is always 180 degrees. Here's the step-by-step reasoning:\n\n1. **Identify the given angles**: We are given two angles of 60 degrees each.\n2. **Sum of the angles in a triangle**: The sum of all three angles in any triangle is always 180 degrees.\n3. **Set up the equation**: Let the third angle be \\( x \\). According to the property of triangles, we can write the equation:\n   \\[\n   60^\\circ + 60^\\circ + x = 180^\\circ\n   \\]\n4. **Solve for \\( x \\)**: Combine the known angles:\n   \\[\n   120^\\circ + x = 180^\\circ\n   \\]\n   Subtract 120 degrees from both",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Bob originally has 3 apples. Ann gives him 4 more apples. To find out how many apples Bob has in total, we need to add the number of apples Ann gave him to the number of apples Bob already had. So, we perform the following calculation:\n\n3 (original apples) + 4 (apples given by Ann) = 7 apples\n\nTherefore, Bob now has 7 apples.",
+            "tokens": 84,
+            "reasoning_markers": 3,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 65,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "The square root of a number is a value that, when multiplied by itself, gives the original number. For the number 49, we are looking for a number that, when squared, equals 49.\n\n1. **Identify the number**: The number we are finding the square root of is 49.\n\n2. **Consider the properties of square roots**: The square root of a number is always non-negative. This means the square root of 49 will be a non-negative number.\n\n3. **Find the pair of numbers that multiply to 49**: We need to find two numbers that multiply together to give 49. The pairs of factors of 49 are:\n   - \\(1 \\times 49 = 49\\)\n   - \\(7 \\times 7 = 49\\)\n\n4. **Determine the square root**: Since we are looking for a non-negative number, we take the positive pair of factors, which",
+            "tokens": 200,
+            "reasoning_markers": 3,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 2,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To solve for x in the equation 5 + x = 13, we need to isolate x on one side of the equation. Here's the step-by-step reasoning:\n\n1. **Identify the equation**: We have the equation 5 + x = 13.\n\n2. **Understand what we need to do**: We need to find the value of x that makes the equation true.\n\n3. **Isolate x**: To do this, we need to get x by itself on one side of the equation. We can do this by subtracting 5 from both sides of the equation.\n\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n4. **Simplify both sides**:\n   - On the left side, 5 - 5 cancels out, leaving just x.\n   - On the right side, 13 - 5 equals 8.\n\n   So, we have:\n\n   \\[",
+            "tokens": 200,
+            "reasoning_markers": 3,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -54,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "prompt_tail_20_steps_10",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "patch_mode": "prompt_tail_20",
+        "max_patch_steps": 10,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 0.0,
+        "avg_marker_reduction": 0.0,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 0.5,
+        "maintained_accuracy": 0.5,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "prompt_tail_20_steps_5",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "patch_mode": "prompt_tail_20",
+        "max_patch_steps": 5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 0.0,
+        "avg_marker_reduction": 0.0,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 0.5,
+        "maintained_accuracy": 0.5,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24.",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    }
+  ]
+}

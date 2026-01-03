@@ -1,0 +1,1576 @@
+{
+  "strategies": [
+    {
+      "config": {
+        "name": "resid_post-top3-a1.0-greedy",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 69.3,
+        "avg_marker_reduction": 1.6,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.6,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-top3-a1.0-sample",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 77.1,
+        "avg_marker_reduction": 2.0,
+        "baseline_accuracy": 0.5,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.5,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-top3-a0.5-greedy",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 62.8,
+        "avg_marker_reduction": 1.5,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.6,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-top3-a0.5-sample",
+        "hook_point": "resid_post",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 102.6,
+        "avg_marker_reduction": 1.0,
+        "baseline_accuracy": 0.2,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.2,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-early_0_6-a1.0-greedy",
+        "hook_point": "resid_post",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 72.9,
+        "avg_marker_reduction": 1.7,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.6,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-early_0_6-a1.0-sample",
+        "hook_point": "resid_post",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 65.0,
+        "avg_marker_reduction": 2.2,
+        "baseline_accuracy": 0.4,
+        "intervened_accuracy": 0.8,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-early_0_6-a0.5-greedy",
+        "hook_point": "resid_post",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 68.3,
+        "avg_marker_reduction": 1.3,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.6,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-early_0_6-a0.5-sample",
+        "hook_point": "resid_post",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 71.6,
+        "avg_marker_reduction": 0.8,
+        "baseline_accuracy": 0.4,
+        "intervened_accuracy": 0.8,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-single_6-a1.0-greedy",
+        "hook_point": "resid_post",
+        "layers": [
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 73.0,
+        "avg_marker_reduction": 1.9,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.5,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-single_6-a1.0-sample",
+        "hook_point": "resid_post",
+        "layers": [
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 102.2,
+        "avg_marker_reduction": 2.2,
+        "baseline_accuracy": 0.4,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-single_6-a0.5-greedy",
+        "hook_point": "resid_post",
+        "layers": [
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": -8.8,
+        "avg_marker_reduction": 0.8,
+        "baseline_accuracy": 0.8,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "resid_post-single_6-a0.5-sample",
+        "hook_point": "resid_post",
+        "layers": [
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 49.1,
+        "avg_marker_reduction": 1.0,
+        "baseline_accuracy": 0.4,
+        "intervened_accuracy": 1.0,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-top3-a1.0-greedy",
+        "hook_point": "attn_out",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": -34.8,
+        "avg_marker_reduction": 0.2,
+        "baseline_accuracy": 0.8,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-top3-a1.0-sample",
+        "hook_point": "attn_out",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 16.2,
+        "avg_marker_reduction": -0.4,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.4,
+        "maintained_accuracy": 0.2,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-top3-a0.5-greedy",
+        "hook_point": "attn_out",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 0.0,
+        "avg_marker_reduction": 0.0,
+        "baseline_accuracy": 0.8,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.6,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-top3-a0.5-sample",
+        "hook_point": "attn_out",
+        "layers": [
+          6,
+          2,
+          3
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": -6.0,
+        "avg_marker_reduction": -0.2,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.4,
+        "maintained_accuracy": 0.2,
+        "verdict": "WEAK"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-early_0_6-a1.0-greedy",
+        "hook_point": "attn_out",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 72.9,
+        "avg_marker_reduction": 1.7,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.6,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-early_0_6-a1.0-sample",
+        "hook_point": "attn_out",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 100.6,
+        "avg_marker_reduction": 2.6,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.5,
+        "verdict": "MODERATE"
+      }
+    },
+    {
+      "config": {
+        "name": "attn_out-early_0_6-a0.5-greedy",
+        "hook_point": "attn_out",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 38.7,
+        "avg_marker_reduction": 1.3,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.5,
+        "verdict": "MODERATE"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. We start with the number 7.\n2. We need to add 5 to it.\n3. To do this, we can think of it as counting up by 5 from 7.\n4. Counting up by 5 from 7:\n   - 7 + 1 = 8\n   - 8 + 1 = 9\n   - 9 + 1 = 10\n   - 10 + 1 = 11\n   - 11 + 1 = 12\n5. So, 7 + 5 = 12.\n\nTherefore, the answer to 7 + 5 is 12.",
+            "tokens": 152,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -51,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To determine how much money Sarah has left after spending 8 dollars out of her initial 20 dollars, we can follow these steps:\n\n1. **Identify the initial amount**: Sarah starts with 20 dollars.\n2. **Identify the amount spent**: Sarah spends 8 dollars.\n3. **Subtract the amount spent from the initial amount**: \n   \\[\n   20 - 8 = 12\n   \\]\n\nSo, after spending 8 dollars, Sarah has 12 dollars left.",
+            "tokens": 109,
+            "reasoning_markers": 3,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -15,
+            "marker_reduction": 2,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. We need to multiply 6 by 4.\n2. This can be written as: 6 \u00d7 4\n3. To solve this, we can think of it as adding 6 to itself 4 times:\n   6 + 6 + 6 + 6\n4. Alternatively, we can use the multiplication table:\n   6 \u00d7 4 = 24\n\nSo, 6 times 4 equals 24.",
+            "tokens": 103,
+            "reasoning_markers": 3,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 40,
+            "marker_reduction": 2,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the area of a square, we use the formula:\n\n\\[ \\text{Area} = \\text{side length} \\times \\text{side length} \\]\n\nGiven that the side length of the square is 5, we can substitute this value into the formula:\n\n\\[ \\text{Area} = 5 \\times 5 \\]\n\n\\[ \\text{Area} = 25 \\]\n\nSo, the area of the square is 25 square units.",
+            "tokens": 99,
+            "reasoning_markers": 2,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 101,
+            "marker_reduction": 2,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To solve the equation 2x = 14 for x, we need to isolate x on one side of the equation. Here's how we do it:\n\n1. We start with the equation: 2x = 14\n\n2. To isolate x, we need to divide both sides of the equation by 2:\n\n   2x \u00f7 2 = 14 \u00f7 2\n\n3. On the left side, the 2's cancel out, leaving us with:\n\n   x = 14 \u00f7 2\n\n4. Now, we perform the division:\n\n   x = 7\n\nSo, the solution to the equation 2x = 14 is x = 7.",
+            "tokens": 150,
+            "reasoning_markers": 2,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 50,
+            "marker_reduction": 3,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of dividing 100 by 4 step by step:\n\n1. **Understand the Division**: We need to find out how many times 4 fits into 100.\n\n2. **Estimate**: First, let's estimate how many times 4 fits into 100. We know that:\n   - 4 times 20 is 80.\n   - 4 times 30 is 120.\n\n   Since 120 is greater than 100, 4 does not fit into 100 more than 20 times.\n\n3. **Calculate**: To be more precise, we can use long division or a calculator to find the exact quotient.\n\n   - 100 \u00f7 4 = 25\n\n4. **Verify**: To verify, we can multiply 25 by 4:\n   - 25 \u00d7 4 = 10",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "10",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. We start with the number 100.\n2. We need to divide this number by 4.\n3. To do this, we can think of it as splitting 100 into 4 equal parts.\n4. Each part would be 100 \u00f7 4 = 25.\n\nSo, 100 divided by 4 equals 25.",
+            "tokens": 90,
+            "reasoning_markers": 3,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 110,
+            "marker_reduction": 3,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Identify the given angles:**\n   - The triangle has two angles that are each 60 degrees.\n\n2. **Sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Set up the equation:**\n   - Let the third angle be \\( x \\).\n   - According to the sum of angles in a triangle, we have:\n     \\[\n     60^\\circ + 60^\\circ + x = 180^\\circ\n     \\]\n\n4. **Simplify the equation:**\n   - Combine the known angles:\n     \\[\n     120^\\circ + x = 180^\\circ\n     \\]\n\n5. **Solve for \\( x \\):**\n   - Subtract 120 degrees from both sides of the equation:\n     \\[\n     x",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "120",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To determine the third angle of a triangle, we can use the fact that the sum of the interior angles of any triangle is always 180 degrees. This is a fundamental property of triangles.\n\nGiven:\n- One angle is 60 degrees.\n- Another angle is 60 degrees.\n\nLet's denote the third angle as \\( x \\).\n\nAccording to the triangle angle sum property:\n\\[ 60^\\circ + 60^\\circ + x = 180^\\circ \\]\n\nNow, we can solve for \\( x \\):\n\\[ 120^\\circ + x = 180^\\circ \\]\n\\[ x = 180^\\circ - 120^\\circ \\]\n\\[ x = 60^\\circ \\]\n\nSo, the third angle is also 60 degrees.",
+            "tokens": 171,
+            "reasoning_markers": 3,
+            "extracted_answer": "60",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 29,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - This can be written as: \\( 3 \\) apples.\n\n2. **Apples Given by Ann**: Ann gives Bob 4 more apples.\n   - This can be written as: \\( +4 \\) apples.\n\n3. **Total Count**: To find the total number of apples Bob has, we add the initial number of apples to the number of apples given by Ann.\n   - This can be written as: \\( 3 + 4 \\).\n\n4. **Perform the Addition**: \\( 3 + 4 = 7 \\).\n\nSo, Bob has a total of 7 apples.",
+            "tokens": 149,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. Bob starts with 3 apples.\n2. Ann gives Bob 4 more apples.\n\nTo find out how many apples Bob has in total, we add the apples he started with to the apples Ann gave him:\n\n3 (Bob's initial apples) + 4 (Apples given by Ann) = 7 apples\n\nSo, Bob has 7 apples in total.",
+            "tokens": 85,
+            "reasoning_markers": 3,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 64,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem of finding the square root of 49 step by step.\n\n1. **Understanding the Square Root Concept**:\n   - The square root of a number \\( x \\) is a value \\( y \\) such that \\( y^2 = x \\).\n   - For example, the square root of 9 is 3 because \\( 3^2 = 9 \\).\n\n2. **Identifying the Number**:\n   - We need to find the square root of 49. This means we are looking for a number \\( y \\) such that \\( y^2 = 49 \\).\n\n3. **Finding the Number**:\n   - We know that \\( 7^2 = 49 \\) because \\( 7 \\times 7 = 49 \\).\n   - Also, \\( (-7)^2 = 49 \\) because \\( -7 \\times -7 = 49 \\).\n\n4",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "The square root of a number is a value that, when multiplied by itself, gives the original number. For 49, we are looking for a number that, when squared, equals 49.\n\nLet's consider the possible values:\n\n1. If we take the positive number 7, then \\(7 \\times 7 = 49\\).\n2. If we take the negative number -7, then \\(-7 \\times -7 = 49\\).\n\nSo, both 7 and -7 are square roots of 49. However, by convention, when we talk about the \"square root\" of a number, we usually mean the principal (non-negative) square root.\n\nTherefore, the principal square root of 49 is 7.",
+            "tokens": 159,
+            "reasoning_markers": 6,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 41,
+            "marker_reduction": -1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. We start with the equation:\n   \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\(x\\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 146,
+            "reasoning_markers": 4,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's solve the equation step by step.\n\nGiven:\n\\[ 5 + x = 13 \\]\n\nStep 1: Isolate \\( x \\) on one side of the equation.\nTo do this, we need to subtract 5 from both sides of the equation.\n\n\\[ 5 + x - 5 = 13 - 5 \\]\n\nStep 2: Simplify both sides.\n\\[ x = 8 \\]\n\nSo, the value of \\( x \\) is 8.\n\nTo verify:\n\\[ 5 + 8 = 13 \\]\n\nThis confirms that our solution is correct.",
+            "tokens": 128,
+            "reasoning_markers": 4,
+            "extracted_answer": "13",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 18,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "attn_out-early_0_6-a0.5-sample",
+        "hook_point": "attn_out",
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 46.7,
+        "avg_marker_reduction": 1.9,
+        "baseline_accuracy": 0.7,
+        "intervened_accuracy": 0.9,
+        "maintained_accuracy": 0.6,
+        "verdict": "MODERATE"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step.\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with 7.\n   - Add 5 to 7.\n   - 7 + 5 = 12\n\nSo, 7 + 5 equals 12.",
+            "tokens": 97,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. We have the numbers 7 and 5.\n2. We need to add these two numbers together.\n3. When we add 7 and 5, we get 12.\n\nSo, 7 + 5 = 12\n\nTherefore, the answer to the question \"What is 7 + 5?\" is 12.",
+            "tokens": 82,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 15,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down this problem step by step.\n\n1. **Initial Amount**: Sarah starts with $20.\n\n2. **Spending**: Sarah spends $8.\n\n3. **Calculation**:\n   - We need to subtract the amount spent from the initial amount.\n   - This can be written as: \\(20 - 8\\).\n\n4. **Subtraction**:\n   - Subtract 8 from 20: \\(20 - 8 = 12\\).\n\nSo, after spending $8, Sarah has $12 left.\n\nTherefore, the answer is $12.",
+            "tokens": 126,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To determine how much money Sarah has left after spending 8 pounds, we need to subtract the amount she spent from the total amount she had.\n\n1. Sarah starts with 20 pounds.\n2. She spends 8 pounds.\n\nTo find out how much she has left, we subtract the amount spent from the initial amount:\n\n20 pounds - 8 pounds = 12 pounds\n\nSo, Sarah has 12 pounds left.",
+            "tokens": 90,
+            "reasoning_markers": 2,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 36,
+            "marker_reduction": 3,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers**: The numbers we need to multiply are 6 and 4.\n2. **Understand the operation**: We need to find the product of these two numbers.\n3. **Perform the multiplication**:\n   - 6 multiplied by 4 is the same as adding 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo further illustrate this, we can break it down even further:\n- 6 times 4 is the same as 2 times 6 (since 4 is 2 times 2).\n- 2 times 6 is 12.\n\nTherefore, 6 times 4 equals 24.",
+            "tokens": 173,
+            "reasoning_markers": 6,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down:\n\n1. **Understanding the problem**: We need to find the product of 6 and 4.\n\n2. **Multiplication concept**: When we multiply two numbers, we are essentially adding one number to itself as many times as the other number indicates.\n\n3. **Performing the multiplication**:\n   - 6 times 4 means adding 6 to itself 4 times.\n   - So, 6 + 6 + 6 + 6 = 24.\n\n4. **Verification**: \n   - We can also think of it as 4 groups of 6, which is 4 * 6 = 24.\n\nTherefore, 6 times 4 equals 24.",
+            "tokens": 151,
+            "reasoning_markers": 4,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 22,
+            "marker_reduction": 2,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Sure, let's solve this step by step.\n\n1. **Identify the given information:**\n   - We have a square.\n   - The side length of the square is 5.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula \\( A = s^2 \\), where \\( s \\) is the side length of the square.\n\n3. **Substitute the given side length into the formula:**\n   - Here, \\( s = 5 \\).\n   - So, \\( A = 5^2 \\).\n\n4. **Calculate the square of the side length:**\n   - \\( 5^2 = 5 \\times 5 = 25 \\).\n\n5. **State the final answer:**\n   - The area of the square is 25.\n\nTherefore, the area of the square with a side length of 5 is 25",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "intervened": {
+            "text": "To find the area of a square, we use the formula:\n\n\\[ \\text{Area} = \\text{side length} \\times \\text{side length} \\]\n\nGiven that the side length of the square is 5, we can substitute this value into the formula:\n\n\\[ \\text{Area} = 5 \\times 5 \\]\n\n\\[ \\text{Area} = 25 \\]\n\nSo, the area of the square is 25 square units.",
+            "tokens": 99,
+            "reasoning_markers": 2,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 101,
+            "marker_reduction": 4,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Given Equation**: We are given the equation \\(2x = 14\\).\n\n2. **Objective**: We need to solve for \\(x\\).\n\n3. **Isolate \\(x\\)**: To find the value of \\(x\\), we need to get \\(x\\) by itself on one side of the equation. The equation \\(2x = 14\\) means that \\(x\\) is being multiplied by 2.\n\n4. **Divide Both Sides by 2**: To isolate \\(x\\), we divide both sides of the equation by 2.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n5. **Simplify**: On the left side, the 2's cancel out:\n   \\[\n   x = 7\n   \\]\n\n6. **Conclusion**: The value of \\(x\\) that satisfies the",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "6",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation \\(2x = 14\\) for \\(x\\).\n\n1. **Identify the equation**: We have \\(2x = 14\\).\n\n2. **Isolate the variable**: To solve for \\(x\\), we need to get \\(x\\) by itself on one side of the equation. Since \\(x\\) is multiplied by 2, we'll divide both sides of the equation by 2 to isolate \\(x\\).\n\n3. **Divide both sides by 2**:\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n4. **Simplify**:\n   \\[\n   x = 7\n   \\]\n\nSo, the solution is \\(x = 7\\).",
+            "tokens": 165,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 35,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "What is 100 divided by 4?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the division of 100 by 4 step-by-step:\n\n1. **Understand the division operation**: We need to find out how many times 4 can fit into 100.\n\n2. **Set up the division**: \n   \\[\n   100 \\div 4\n   \\]\n\n3. **Estimate the first part**: \n   - 4 goes into 10 once (since \\(4 \\times 1 = 4\\)).\n   - So, we can start by saying that 4 fits into 10 once.\n\n4. **Subtract and bring down the next digit**:\n   - Subtract 4 from 10 to get a remainder of 6.\n   - Bring down the next digit (which is 0) to make it 60.\n\n5. **Repeat the process**:\n   - 4 goes into 60 fifteen times (since \\(4 \\times",
+            "tokens": 200,
+            "reasoning_markers": 7,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "intervened": {
+            "text": "To find the result of 100 divided by 4, you can follow these steps:\n\n1. Start with the number 100.\n2. Divide it by 4.\n3. The result is 25.\n\nSo, 100 divided by 4 equals 25.",
+            "tokens": 64,
+            "reasoning_markers": 2,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 136,
+            "marker_reduction": 5,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+          "expected_answer": "60",
+          "baseline": {
+            "text": "Sure, let's approach this step-by-step:\n\n1. **Identify the type of triangle**: The triangle in question has angles of 60 degrees, 60 degrees, and an unknown third angle. This is a special type of triangle called an equilateral triangle because all three angles are equal.\n\n2. **Understand the properties of an equilateral triangle**: In an equilateral triangle, all three sides are equal in length, and all three angles are equal. The sum of the interior angles in any triangle is always 180 degrees.\n\n3. **Calculate the third angle**: Since all three angles are equal in an equilateral triangle, each angle must be 1/3 of the total sum of the angles. Therefore, we can set up the equation:\n   \\[\n   \\text{Third angle} = \\frac{180^\\circ}{3}\n   \\]\n   \\[\n   \\text{Third angle} = 60^\\circ",
+            "tokens": 200,
+            "reasoning_markers": 7,
+            "extracted_answer": "60",
+            "correct": true
+          },
+          "intervened": {
+            "text": "The sum of the angles in any triangle is always 180 degrees. This is a fundamental property of triangles in Euclidean geometry.\n\nGiven:\n- One angle is 60 degrees.\n- Another angle is 60 degrees.\n\nLet's denote the third angle as \\( x \\).\n\nAccording to the property of triangles:\n\\[ 60^\\circ + 60^\\circ + x = 180^\\circ \\]\n\nCombine the known angles:\n\\[ 120^\\circ + x = 180^\\circ \\]\n\nTo find \\( x \\), subtract 120 degrees from both sides:\n\\[ x = 180^\\circ - 120^\\circ \\]\n\\[ x = 60^\\circ \\]\n\nSo, the third angle is also 60 degrees.",
+            "tokens": 169,
+            "reasoning_markers": 2,
+            "extracted_answer": "60",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 31,
+            "marker_reduction": 5,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Count**: Bob starts with 3 apples.\n   - **Step 1**: Bob has 3 apples.\n\n2. **Adding More Apples**: Ann gives Bob 4 more apples.\n   - **Step 2**: Ann gives 4 more apples to Bob.\n   - **Step 3**: Now, Bob has 3 apples + 4 apples = 7 apples.\n\nTherefore, after receiving 4 more apples from Ann, Bob has a total of 7 apples.",
+            "tokens": 114,
+            "reasoning_markers": 3,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "You're right, let's break it down:\n\n1. Bob starts with 3 apples.\n2. Ann gives Bob 4 more apples.\n\nTo find out how many apples Bob has in total, we add the apples he started with to the apples Ann gave him:\n\n3 (initial apples) + 4 (given by Ann) = 7 apples\n\nSo, Bob has 7 apples in total.",
+            "tokens": 83,
+            "reasoning_markers": 3,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 31,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is the square root of 49?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "To find the square root of 49, we can follow these steps:\n\n1. **Understand the concept**: The square root of a number is a value that, when multiplied by itself, gives the original number. In mathematical terms, if \\( x \\) is the square root of 49, then \\( x^2 = 49 \\).\n\n2. **List the possible values**: We need to find two numbers that multiply to 49. These numbers could be positive or negative, but the square root will be positive.\n\n3. **Factorize 49**: We know that 49 can be factored into 7 and 7, because \\( 7 \\times 7 = 49 \\).\n\n4. **Consider both positive and negative roots**:\n   - \\( 7 \\times 7 = 49 \\)\n   - \\( (-7) \\times (-7) = 49 \\)\n\n5. **Identify the",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "The square root of a number is a value that, when multiplied by itself, gives the original number. For 49, we are looking for a number that, when squared, equals 49.\n\nLet's break it down:\n\n1. 7 * 7 = 49\n2. 8 * 8 = 64\n\nSince 7 is the only number that, when squared, equals 49, the square root of 49 is 7.\n\nTherefore, the square root of 49 is 7.",
+            "tokens": 114,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 86,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 5 + x = 13, what is x?",
+          "expected_answer": "8",
+          "baseline": {
+            "text": "Sure, let's solve the equation step by step:\n\n1. **Start with the equation**: \n   \\[\n   5 + x = 13\n   \\]\n\n2. **Isolate the variable \\(x\\)** by subtracting 5 from both sides of the equation. This will cancel out the 5 on the left side:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplify the equation:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) that satisfies the equation \\(5 + x = 13\\) is \\(x = 8\\).",
+            "tokens": 142,
+            "reasoning_markers": 3,
+            "extracted_answer": "8",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's solve the equation step by step.\n\nThe equation given is:\n\\[ 5 + x = 13 \\]\n\nStep 1: To isolate \\( x \\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides of the equation.\n\\[ 5 + x - 5 = 13 - 5 \\]\n\nStep 2: Simplify both sides of the equation.\n\\[ x = 8 \\]\n\nSo, the value of \\( x \\) is 8.\n\nTo verify, we can substitute \\( x = 8 \\) back into the original equation:\n\\[ 5 + 8 = 13 \\]\n\\[ 13 = 13 \\]\n\nThis confirms that our solution is correct.",
+            "tokens": 168,
+            "reasoning_markers": 4,
+            "extracted_answer": "13",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": -26,
+            "marker_reduction": -1,
+            "maintained_correctness": false
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "attn_out-single_6-a1.0-greedy",
+        "hook_point": "attn_out",
+        "layers": [
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": -5.2,
+        "avg_marker_reduction": 0.2,
+        "baseline_accuracy": 0.8,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.6,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break down the problem of adding 7 and 5 step by step:\n\n1. **Identify the numbers to be added**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the final answer is 12.",
+            "tokens": 106,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -5,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Amount Spent**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 95,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -1,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break down the problem of finding 6 times 4 step by step:\n\n1. **Understanding the Problem**: We need to find the product of 6 and 4. This means we need to multiply 6 by 4.\n\n2. **Multiplication Process**:\n   - Start with the number 6.\n   - Count 4 times: 6, 12, 18, 24.\n\n3. **Verification**:\n   - Another way to verify this is to think of it as adding 6 four times: 6 + 6 + 6 + 6 = 24.\n\n4. **Final Answer**: The product of 6 and 4 is 24.\n\nSo, 6 times 4 equals 24.",
+            "tokens": 163,
+            "reasoning_markers": 4,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -20,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation \\(2x = 14\\) step by step.\n\n### Step 1: Understand the Equation\nThe equation given is \\(2x = 14\\). This means that the product of 2 and \\(x\\) equals 14.\n\n### Step 2: Isolate the Variable\nTo solve for \\(x\\), we need to isolate it on one side of the equation. We can do this by dividing both sides of the equation by 2.\n\n### Step 3: Perform the Division\nDivide both sides of the equation by 2:\n\\[\n\\frac{2x}{2} = \\frac{14}{2}\n\\]\n\n### Step 4: Simplify\nOn the left side, the 2's cancel out:\n\\[\nx = \\frac{14}{2}\n\\]\n\n### Step 5: Calculate the Result\nNow, perform the division on the right side:\n\\[\nx =",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "attn_out-single_6-a1.0-sample",
+        "hook_point": "attn_out",
+        "layers": [
+          6
+        ],
+        "alpha": 1.0,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": -20.6,
+        "avg_marker_reduction": 0.2,
+        "baseline_accuracy": 0.8,
+        "intervened_accuracy": 0.2,
+        "maintained_accuracy": 0.2,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers: 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with 7.\n   - Add 5 to 7.\n   - 7 + 5 = 12.\n\nSo, the result of 7 + 5 is 12.\n\nTo verify:\n- 7 + 5 = 12\n- If we imagine it on a number line, starting at 7 and moving 5 steps to the right, we land on 12.\n\nTherefore, the final answer is 12.",
+            "tokens": 154,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break down the problem of adding 7 and 5 step by step:\n\n1. **Identify the numbers to be added**: We have two numbers, 7 and 5.\n2. **Align the numbers vertically**: To make the addition easier, we can align the numbers vertically, with the ones place under each other:\n   ```\n     7\n   + 5\n   ```\n3. **Add the digits in the ones place**: We add the digits in the ones place first. In this case, we add 7 and 5:\n   ```\n     7\n   + 5\n   ----\n     12\n   ```\n4. **Handle the carry-over**: Since we have a 2 in the ones place, we need to carry over the 1 to the tens place. However, since we are only adding two numbers, we don't need to worry about the tens place yet.\n5. **Write down the result**: The",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": -46,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's approach this step by step.\n\n1. **Identify the initial amount**: Sarah starts with 20 dollars.\n\n2. **Identify the amount spent**: Sarah spends 8 dollars.\n\n3. **Calculate the remaining amount**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 \\text{ dollars} - 8 \\text{ dollars} = 12 \\text{ dollars} \\]\n\nTherefore, after spending 8 dollars, Sarah has 12 dollars left.",
+            "tokens": 121,
+            "reasoning_markers": 6,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break this down step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 93,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 28,
+            "marker_reduction": 1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers**: We are dealing with the multiplication of 6 and 4.\n\n2. **Understand the operation**: Multiplication is a mathematical operation that involves combining groups of the same size. Here, we have 6 groups of 4 items each.\n\n3. **Visualize the problem**: Imagine you have 6 boxes, and each box contains 4 apples. To find out how many apples you have in total, you would need to count all the apples.\n\n4. **Perform the multiplication**:\n   - 6 times 4 is the same as adding 6 to itself 4 times.\n   - So, 6 + 6 + 6 + 6 = 24.\n\n5. **Verify the result**: \n   - Another way to check is to imagine having 4 groups of 6 items each. That would be 4 boxes with 6 apples in each box.",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "6",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break down the problem of calculating 6 times 4 step by step:\n\n1. **Understand the multiplication concept**: Multiplication is essentially repeated addition. When we say 6 times 4, we are adding the number 6 to itself 4 times.\n\n2. **Write out the addition**: \n   - We need to add 6 to itself 4 times. \n   - This can be written as: \\(6 + 6 + 6 + 6\\).\n\n3. **Perform the addition**:\n   - First, add 6 and 6: \\(6 + 6 = 12\\).\n   - Next, add the result to 6: \\(12 + 6 = 18\\).\n   - Finally, add the result to 6 again: \\(18 + 6 = 24\\).\n\n4. **Verify the result**: \n   - We can also verify this by using the multiplication table.",
+            "tokens": 200,
+            "reasoning_markers": 6,
+            "extracted_answer": "4",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": -2,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Sure, let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5.\n\n2. **Understand the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula \\( A = \\text{side length}^2 \\).\n\n3. **Substitute the given side length into the formula:**\n   - Here, the side length is 5.\n   - So, \\( A = 5^2 \\).\n\n4. **Calculate the square of the side length:**\n   - \\( 5^2 = 5 \\times 5 = 25 \\).\n\n5. **State the final answer:**\n   - The area of the square is 25.\n\nSo, the area of the square with side length 5 is 25 square units.",
+            "tokens": 196,
+            "reasoning_markers": 5,
+            "extracted_answer": "25",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": -4,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's break this down step-by-step:\n\n1. We start with the equation: 2x = 14\n2. To isolate x, we need to divide both sides of the equation by 2.\n3. On the left side, 2x divided by 2 equals x.\n4. On the right side, 14 divided by 2 equals 7.\n5. So, after performing the division, we have: x = 7\n\nTherefore, the solution to the equation 2x = 14 is x = 7.",
+            "tokens": 119,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation \\(2x = 14\\) step by step.\n\n### Step 1: Understand the Equation\nThe equation given is \\(2x = 14\\). This is a simple linear equation where \\(x\\) is the unknown variable.\n\n### Step 2: Isolate the Variable\nTo solve for \\(x\\), we need to isolate it on one side of the equation. The variable \\(x\\) is currently being multiplied by 2.\n\n### Step 3: Divide Both Sides by the Coefficient of \\(x\\)\nTo isolate \\(x\\), we divide both sides of the equation by 2.\n\n\\[\n\\frac{2x}{2} = \\frac{14}{2}\n\\]\n\n### Step 4: Simplify\nOn the left side, the 2's cancel out:\n\n\\[\nx = \\frac{14}{2}\n\\]\n\nOn the right side, we perform the division:\n\n\\[",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "2",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": -81,
+            "marker_reduction": 1,
+            "maintained_correctness": false
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "attn_out-single_6-a0.5-greedy",
+        "hook_point": "attn_out",
+        "layers": [
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "greedy",
+          "do_sample": false,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "summary": {
+        "avg_token_reduction": -6.8,
+        "avg_marker_reduction": -0.4,
+        "baseline_accuracy": 0.8,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.6,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer to 7 + 5 is 12.",
+            "tokens": 101,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer is 12.",
+            "tokens": 95,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 6,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 means we need to add 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nTo verify:\n- If you have 6 groups of 4 items each, you would have a total of 24 items.\n\nTherefore, the answer is 24.",
+            "tokens": 143,
+            "reasoning_markers": 5,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break down the problem of finding 6 times 4 step by step:\n\n1. **Understanding the Problem**: We need to find the product of 6 and 4. This means we need to multiply 6 by 4.\n\n2. **Multiplication Process**: To multiply 6 by 4, we can think of it as adding 6 to itself 4 times. This is because multiplication is essentially repeated addition.\n\n3. **Breaking Down the Addition**:\n   - First, add 6 to itself once: \\(6 + 6 = 12\\)\n   - Next, add 6 to the result of the first addition: \\(12 + 6 = 18\\)\n\n4. **Final Answer**: After performing the addition, we find that 6 times 4 equals 18.\n\nSo, the final answer is 18.",
+            "tokens": 183,
+            "reasoning_markers": 7,
+            "extracted_answer": "18",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": -40,
+            "marker_reduction": -2,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - Replace the side length with 5:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Calculate \\( 5 \\times 5 \\):\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5. **State the final answer:**\n   -",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify both sides:**\n   On the left side, the 2's cancel out:\n   \\[\n   x = \\frac{14}{2}\n   \\]\n   On the right side, 14 divided by 2 equals 7:\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": true
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "attn_out-single_6-a0.5-sample",
+        "hook_point": "attn_out",
+        "layers": [
+          6
+        ],
+        "alpha": 0.5,
+        "decoding": {
+          "name": "sample",
+          "do_sample": true,
+          "temperature": 0.7,
+          "top_p": 0.9
+        }
+      },
+      "summary": {
+        "avg_token_reduction": 15.2,
+        "avg_marker_reduction": -0.8,
+        "baseline_accuracy": 0.6,
+        "intervened_accuracy": 0.6,
+        "maintained_accuracy": 0.4,
+        "verdict": "WEAK"
+      },
+      "detailed_results": [
+        {
+          "problem": "What is 7 + 5?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Sure, let's break down the problem of 7 + 5 step by step:\n\n1. **Identify the numbers**: We have two numbers to add: 7 and 5.\n2. **Align the numbers**: Write the numbers one below the other, aligning them by place value (ones place):\n   ```\n   7\n   +5\n   ```\n3. **Add the digits in the ones place**: Add the digits in the ones place of both numbers:\n   ```\n   7\n   +5\n   ----\n   12\n   ```\n   Here, we have 7 + 5 = 12.\n4. **Record the result**: Write down the sum of the ones place and carry over any tens place if necessary. In this case, we have a 2 in the ones place and a 1 in the tens place to carry over:\n   ```\n   7\n   +5\n   ----\n   12",
+            "tokens": 200,
+            "reasoning_markers": 3,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the number 7.\n   - Add 5 to it.\n   - 7 + 5 = 12\n\nSo, the answer is 12.",
+            "tokens": 95,
+            "reasoning_markers": 4,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 105,
+            "marker_reduction": -1,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+          "expected_answer": "12",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step.\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n\n2. **Amount Spent**: Sarah spends 8 dollars.\n\n3. **Calculation**:\n   - Subtract the amount spent from the initial amount:\n   \\[\n   20 - 8 = 12\n   \\]\n\nSo, after spending 8 dollars, Sarah has 12 dollars left.",
+            "tokens": 92,
+            "reasoning_markers": 3,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Spending**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.",
+            "tokens": 94,
+            "reasoning_markers": 5,
+            "extracted_answer": "12",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": -2,
+            "marker_reduction": -2,
+            "maintained_correctness": true
+          }
+        },
+        {
+          "problem": "What is 6 times 4?",
+          "expected_answer": "24",
+          "baseline": {
+            "text": "Sure, let's break down the problem step by step:\n\n1. **Identify the numbers**: The problem states we need to multiply 6 by 4.\n   \n2. **Understand the operation**: Multiplication is a mathematical operation that combines two numbers to find a product. In this case, we are combining 6 and 4.\n\n3. **Perform the multiplication**: To find the product of 6 and 4, you can think of it as adding the number 4 to itself 6 times. Alternatively, you can use the multiplication table for 4 to find the answer quickly.\n\n4. **Calculate**: \n   - 4 + 4 = 8\n   - 8 + 4 = 12\n   - 12 + 4 = 16\n   - 16 + 4 = 20\n   - 20 + 4 = 24\n\n5. **Conclusion**: The product of 6",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "6",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Sure, let's break it down step by step:\n\n1. **Understand the problem**: We need to find the product of 6 and 4.\n\n2. **Identify the numbers**: The numbers given are 6 and 4.\n\n3. **Use multiplication**: To find the product of two numbers, you multiply them together. So, we need to multiply 6 by 4.\n\n4. **Perform the multiplication**:\n   - 6 multiplied by 4 is 24.\n\n5. **Verify the result**: You can verify this by adding 6 four times (6 + 6 + 6 + 6) or by adding 4 six times (4 + 4 + 4 + 4 + 4 + 4).\n\n6. **Write the final answer**: The product of 6 and 4 is 24.\n\nSo, the final answer is 24.",
+            "tokens": 188,
+            "reasoning_markers": 4,
+            "extracted_answer": "24",
+            "correct": true
+          },
+          "changes": {
+            "token_reduction": 12,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "A square has side length 5. What is its area?",
+          "expected_answer": "25",
+          "baseline": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of a square with a side length of 5 units.\n\n### Step 1: Understand the properties of a square\n- A square is a type of quadrilateral with all four sides of equal length.\n- All angles in a square are right angles (90 degrees).\n\n### Step 2: Recall the formula for the area of a square\nThe area \\( A \\) of a square can be calculated using the formula:\n\\[ A = \\text{side length}^2 \\]\n\n### Step 3: Plug in the given side length\nIn this problem, the side length of the square is given as 5 units.\n\n\\[ A = 5^2 \\]\n\n### Step 4: Perform the calculation\n\\[ A = 5 \\times 5 = 25 \\]\n\n### Step 5: State the final answer\nThe area of the square with a side length of 5 units is",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "intervened": {
+            "text": "Certainly! Let's break down the problem step by step to find the area of the square.\n\n1. **Identify the given information:**\n   - The side length of the square is 5 units.\n\n2. **Recall the formula for the area of a square:**\n   - The area \\( A \\) of a square is given by the formula:\n     \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5 units.\n\n3. **Substitute the given side length into the formula:**\n   - The side length is 5, so we substitute 5 for the side length in the formula:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Multiply 5 by 5:\n     \\[\n     5 \\times 5 = 25\n     \\]\n\n5.",
+            "tokens": 200,
+            "reasoning_markers": 4,
+            "extracted_answer": "5",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": 0,
+            "marker_reduction": 0,
+            "maintained_correctness": false
+          }
+        },
+        {
+          "problem": "If 2x = 14, what is x?",
+          "expected_answer": "7",
+          "baseline": {
+            "text": "Sure, let's break it down step by step.\n\n1. **Identify the equation**: We are given the equation \\(2x = 14\\).\n\n2. **Isolate the variable**: To find the value of \\(x\\), we need to isolate \\(x\\) on one side of the equation. We can do this by dividing both sides of the equation by 2.\n\n3. **Perform the division**: When we divide both sides by 2, we get:\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n4. **Simplify**: Simplifying the right side gives us:\n   \\[\n   x = 7\n   \\]\n\nSo, the value of \\(x\\) is 7.",
+            "tokens": 161,
+            "reasoning_markers": 4,
+            "extracted_answer": "7",
+            "correct": true
+          },
+          "intervened": {
+            "text": "Certainly! Let's solve the equation step by step:\n\n1. **Start with the given equation:**\n   \\[\n   2x = 14\n   \\]\n\n2. **Isolate the variable \\( x \\):**\n   To do this, we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. **Simplify the equation:**\n   On the left side, the 2's cancel out, leaving just \\( x \\).\n   \\[\n   x = 7\n   \\]\n\n4. **Verify the solution:**\n   To ensure our solution is correct, we can substitute \\( x = 7 \\) back into the original equation:\n   \\[\n   2(7) = 14\n   \\]\n   Simplifying the left side gives:\n   \\",
+            "tokens": 200,
+            "reasoning_markers": 5,
+            "extracted_answer": "14",
+            "correct": false
+          },
+          "changes": {
+            "token_reduction": -39,
+            "marker_reduction": -1,
+            "maintained_correctness": false
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+- 2025-12-31 23:42:24 | prompt_all | verdict=WEAK | token_red=69.3 | marker_red=1.6 | maintained=0.40
+- 2025-12-31 23:48:33 | prompt_tail_20 | verdict=WEAK | token_red=0.0 | marker_red=0.0 | maintained=0.50
+- 2025-12-31 23:54:34 | prompt_tail_10 | verdict=WEAK | token_red=0.0 | marker_red=0.0 | maintained=0.50
+- 2026-01-01 00:00:30 | prompt_all_steps_10 | verdict=WEAK | token_red=9.0 | marker_red=1.3 | maintained=0.40
+- 2026-01-01 00:06:37 | prompt_tail_20_steps_10 | verdict=WEAK | token_red=0.0 | marker_red=0.0 | maintained=0.50
+- 2026-01-01 00:12:41 | prompt_tail_20_steps_5 | verdict=WEAK | token_red=0.0 | marker_red=0.0 | maintained=0.50

@@ -1,0 +1,3 @@
+- 2026-01-01 00:33:30 | prompt_all | verdict=WEAK | token_red=-14.7 | marker_red=1.3 | maintained=1.00 | marker_method=enumerated_steps+step_word+connectors_v1
+- 2026-01-01 00:36:40 | prompt_all_layer6 | verdict=WEAK | token_red=-29.9 | marker_red=1.2 | maintained=0.90 | marker_method=enumerated_steps+step_word+connectors_v1
+- 2026-01-01 00:39:54 | prompt_all_layer3 | verdict=WEAK | token_red=-32.3 | marker_red=0.8 | maintained=1.00 | marker_method=enumerated_steps+step_word+connectors_v1

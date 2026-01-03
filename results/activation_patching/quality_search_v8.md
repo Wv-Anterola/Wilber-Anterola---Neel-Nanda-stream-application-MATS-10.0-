@@ -1,0 +1,2 @@
+- 2026-01-01 00:48:29 | prompt_all | verdict=EFFECTIVE | token_red=69.0 | marker_red=3.4 | maintained=1.00 | marker_method=enumerated_steps+step_word+connectors_v1
+- 2026-01-01 23:37:58 | prompt_all | verdict=EFFECTIVE | token_red=78.7 | marker_red=3.1 | maintained=0.92 | marker_method=enumerated_steps+step_word+connectors_v1

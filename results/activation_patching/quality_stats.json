@@ -1,0 +1,19 @@
+﻿{
+  "input": "results/activation_patching/quality_assessment.json",
+  "token_stats": {
+    "n": 25,
+    "mean_diff": 78.68,
+    "std_diff": 38.50077921289387,
+    "t_stat": 10.217975013561565,
+    "p_value": 3.2206722478656145e-10,
+    "cohens_d": 2.043595002659234
+  },
+  "marker_stats": {
+    "n": 25,
+    "mean_diff": 3.12,
+    "std_diff": 1.833030277982336,
+    "t_stat": 8.510497719203702,
+    "p_value": 1.037872721648645e-08,
+    "cohens_d": 1.7020995429121692
+  }
+}

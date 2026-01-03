@@ -1,0 +1,317 @@
+{
+  "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "layers": [
+    6,
+    2,
+    3
+  ],
+  "categories": [
+    "final_answer",
+    "question",
+    "let_me_think",
+    "numbers",
+    "operators",
+    "other"
+  ],
+  "prompt_len_mean": 76.56,
+  "category_token_count_mean": {
+    "final_answer": 2.0,
+    "question": 2.0,
+    "let_me_think": 9.0,
+    "numbers": 2.96,
+    "operators": 2.64,
+    "other": 57.96
+  },
+  "per_layer": {
+    "6": {
+      "category_mean": {
+        "final_answer": 0.002377726836130023,
+        "question": 0.010160435922443867,
+        "let_me_think": 0.048983652144670486,
+        "numbers": 0.0014071358600631356,
+        "operators": 0.0023314168211072683,
+        "other": 0.9347396492958069
+      },
+      "top_heads": {
+        "final_answer": [
+          {
+            "head": 0,
+            "mean_mass": 0.019902175292372704
+          },
+          {
+            "head": 4,
+            "mean_mass": 0.0028294422663748264
+          },
+          {
+            "head": 2,
+            "mean_mass": 0.0017167138867080212
+          }
+        ],
+        "question": [
+          {
+            "head": 0,
+            "mean_mass": 0.06923463940620422
+          },
+          {
+            "head": 2,
+            "mean_mass": 0.017884477972984314
+          },
+          {
+            "head": 1,
+            "mean_mass": 0.01046719215810299
+          }
+        ],
+        "let_me_think": [
+          {
+            "head": 0,
+            "mean_mass": 0.20415712893009186
+          },
+          {
+            "head": 10,
+            "mean_mass": 0.10980278998613358
+          },
+          {
+            "head": 2,
+            "mean_mass": 0.06957993656396866
+          }
+        ],
+        "numbers": [
+          {
+            "head": 0,
+            "mean_mass": 0.009466583840548992
+          },
+          {
+            "head": 10,
+            "mean_mass": 0.002291800919920206
+          },
+          {
+            "head": 2,
+            "mean_mass": 0.0016647586598992348
+          }
+        ],
+        "operators": [
+          {
+            "head": 0,
+            "mean_mass": 0.018123390153050423
+          },
+          {
+            "head": 10,
+            "mean_mass": 0.002905032830312848
+          },
+          {
+            "head": 4,
+            "mean_mass": 0.0014637951971963048
+          }
+        ],
+        "other": [
+          {
+            "head": 9,
+            "mean_mass": 0.9994569420814514
+          },
+          {
+            "head": 7,
+            "mean_mass": 0.9986122846603394
+          },
+          {
+            "head": 8,
+            "mean_mass": 0.9916782975196838
+          }
+        ]
+      }
+    },
+    "2": {
+      "category_mean": {
+        "final_answer": 0.0041413926519453526,
+        "question": 0.029848163947463036,
+        "let_me_think": 0.06171098351478577,
+        "numbers": 0.002195711713284254,
+        "operators": 0.0039011689368635416,
+        "other": 0.8982025980949402
+      },
+      "top_heads": {
+        "final_answer": [
+          {
+            "head": 2,
+            "mean_mass": 0.026843545958399773
+          },
+          {
+            "head": 6,
+            "mean_mass": 0.007869847118854523
+          },
+          {
+            "head": 4,
+            "mean_mass": 0.00605679489672184
+          }
+        ],
+        "question": [
+          {
+            "head": 6,
+            "mean_mass": 0.15480084717273712
+          },
+          {
+            "head": 2,
+            "mean_mass": 0.08694285154342651
+          },
+          {
+            "head": 4,
+            "mean_mass": 0.032131046056747437
+          }
+        ],
+        "let_me_think": [
+          {
+            "head": 11,
+            "mean_mass": 0.16110679507255554
+          },
+          {
+            "head": 4,
+            "mean_mass": 0.09204903244972229
+          },
+          {
+            "head": 6,
+            "mean_mass": 0.08851122856140137
+          }
+        ],
+        "numbers": [
+          {
+            "head": 2,
+            "mean_mass": 0.010153437033295631
+          },
+          {
+            "head": 4,
+            "mean_mass": 0.007185422815382481
+          },
+          {
+            "head": 1,
+            "mean_mass": 0.0019873392302542925
+          }
+        ],
+        "operators": [
+          {
+            "head": 2,
+            "mean_mass": 0.02233288250863552
+          },
+          {
+            "head": 6,
+            "mean_mass": 0.01387026347219944
+          },
+          {
+            "head": 9,
+            "mean_mass": 0.002589826937764883
+          }
+        ],
+        "other": [
+          {
+            "head": 3,
+            "mean_mass": 0.9953240752220154
+          },
+          {
+            "head": 8,
+            "mean_mass": 0.9774167537689209
+          },
+          {
+            "head": 7,
+            "mean_mass": 0.9630481004714966
+          }
+        ]
+      }
+    },
+    "3": {
+      "category_mean": {
+        "final_answer": 0.01303352415561676,
+        "question": 0.018833396956324577,
+        "let_me_think": 0.09604474902153015,
+        "numbers": 0.0052210004068911076,
+        "operators": 0.007984614931046963,
+        "other": 0.8588827252388
+      },
+      "top_heads": {
+        "final_answer": [
+          {
+            "head": 11,
+            "mean_mass": 0.08379873633384705
+          },
+          {
+            "head": 7,
+            "mean_mass": 0.026305746287107468
+          },
+          {
+            "head": 8,
+            "mean_mass": 0.017489520832896233
+          }
+        ],
+        "question": [
+          {
+            "head": 11,
+            "mean_mass": 0.0506068579852581
+          },
+          {
+            "head": 9,
+            "mean_mass": 0.04652601107954979
+          },
+          {
+            "head": 8,
+            "mean_mass": 0.036162760108709335
+          }
+        ],
+        "let_me_think": [
+          {
+            "head": 8,
+            "mean_mass": 0.42807823419570923
+          },
+          {
+            "head": 11,
+            "mean_mass": 0.16737380623817444
+          },
+          {
+            "head": 6,
+            "mean_mass": 0.1418333202600479
+          }
+        ],
+        "numbers": [
+          {
+            "head": 7,
+            "mean_mass": 0.04260841757059097
+          },
+          {
+            "head": 6,
+            "mean_mass": 0.010048318654298782
+          },
+          {
+            "head": 8,
+            "mean_mass": 0.003617812879383564
+          }
+        ],
+        "operators": [
+          {
+            "head": 7,
+            "mean_mass": 0.04266298934817314
+          },
+          {
+            "head": 11,
+            "mean_mass": 0.017108136788010597
+          },
+          {
+            "head": 8,
+            "mean_mass": 0.015816286206245422
+          }
+        ],
+        "other": [
+          {
+            "head": 2,
+            "mean_mass": 0.9987614154815674
+          },
+          {
+            "head": 5,
+            "mean_mass": 0.9894461631774902
+          },
+          {
+            "head": 3,
+            "mean_mass": 0.9700521230697632
+          }
+        ]
+      }
+    }
+  }
+}

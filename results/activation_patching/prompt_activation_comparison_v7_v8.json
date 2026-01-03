@@ -1,0 +1,515 @@
+{
+  "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "layers": [
+    6,
+    2,
+    3
+  ],
+  "summary": {
+    "6": {
+      "cosine_mean": 0.997734375,
+      "cosine_min": 0.99658203125,
+      "cosine_max": 0.99853515625,
+      "l2_mean": 2.234140625,
+      "l2_min": 1.8154296875,
+      "l2_max": 2.51171875
+    },
+    "2": {
+      "cosine_mean": 0.9984375,
+      "cosine_min": 0.99560546875,
+      "cosine_max": 0.99951171875,
+      "l2_mean": 1.17009765625,
+      "l2_min": 0.8564453125,
+      "l2_max": 2.03515625
+    },
+    "3": {
+      "cosine_mean": 0.99759765625,
+      "cosine_min": 0.99609375,
+      "cosine_max": 0.99853515625,
+      "l2_mean": 1.7476171875,
+      "l2_min": 1.400390625,
+      "l2_max": 2.2421875
+    },
+    "v7_prompt_len_mean": 80.56,
+    "v8_prompt_len_mean": 76.56
+  },
+  "results": [
+    {
+      "prompt": "What is 7 + 5?",
+      "v7_prompt_len": 75,
+      "v8_prompt_len": 71,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.51171875
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.220703125
+        },
+        "3": {
+          "cosine": 0.99755859375,
+          "l2": 1.9453125
+        }
+      }
+    },
+    {
+      "prompt": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+      "v7_prompt_len": 86,
+      "v8_prompt_len": 82,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.18359375
+        },
+        "2": {
+          "cosine": 0.99951171875,
+          "l2": 0.85791015625
+        },
+        "3": {
+          "cosine": 0.99853515625,
+          "l2": 1.400390625
+        }
+      }
+    },
+    {
+      "prompt": "What is 6 times 4?",
+      "v7_prompt_len": 75,
+      "v8_prompt_len": 71,
+      "per_layer": {
+        "6": {
+          "cosine": 0.9970703125,
+          "l2": 2.462890625
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.2216796875
+        },
+        "3": {
+          "cosine": 0.9970703125,
+          "l2": 1.9248046875
+        }
+      }
+    },
+    {
+      "prompt": "A square has side length 5. What is its area?",
+      "v7_prompt_len": 80,
+      "v8_prompt_len": 76,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.087890625
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 0.95458984375
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.5546875
+        }
+      }
+    },
+    {
+      "prompt": "If 2x = 14, what is x?",
+      "v7_prompt_len": 80,
+      "v8_prompt_len": 76,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99853515625,
+          "l2": 1.9873046875
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 0.98876953125
+        },
+        "3": {
+          "cosine": 0.99853515625,
+          "l2": 1.611328125
+        }
+      }
+    },
+    {
+      "prompt": "What is 100 divided by 4?",
+      "v7_prompt_len": 78,
+      "v8_prompt_len": 74,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.25390625
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 1.0048828125
+        },
+        "3": {
+          "cosine": 0.99755859375,
+          "l2": 1.6337890625
+        }
+      }
+    },
+    {
+      "prompt": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+      "v7_prompt_len": 88,
+      "v8_prompt_len": 84,
+      "per_layer": {
+        "6": {
+          "cosine": 0.9970703125,
+          "l2": 2.205078125
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 1.0263671875
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.59765625
+        }
+      }
+    },
+    {
+      "prompt": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+      "v7_prompt_len": 87,
+      "v8_prompt_len": 83,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.38671875
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.0576171875
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.6767578125
+        }
+      }
+    },
+    {
+      "prompt": "What is the square root of 49?",
+      "v7_prompt_len": 77,
+      "v8_prompt_len": 73,
+      "per_layer": {
+        "6": {
+          "cosine": 0.9970703125,
+          "l2": 2.279296875
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 0.91015625
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.6005859375
+        }
+      }
+    },
+    {
+      "prompt": "If 5 + x = 13, what is x?",
+      "v7_prompt_len": 81,
+      "v8_prompt_len": 77,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99853515625,
+          "l2": 1.8330078125
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.15625
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.591796875
+        }
+      }
+    },
+    {
+      "prompt": "What is 9 + 8?",
+      "v7_prompt_len": 75,
+      "v8_prompt_len": 71,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99658203125,
+          "l2": 2.478515625
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.216796875
+        },
+        "3": {
+          "cosine": 0.9970703125,
+          "l2": 1.9384765625
+        }
+      }
+    },
+    {
+      "prompt": "What is 15 - 6?",
+      "v7_prompt_len": 76,
+      "v8_prompt_len": 72,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.396484375
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.2158203125
+        },
+        "3": {
+          "cosine": 0.9970703125,
+          "l2": 1.9755859375
+        }
+      }
+    },
+    {
+      "prompt": "What is 7 times 8?",
+      "v7_prompt_len": 75,
+      "v8_prompt_len": 71,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.431640625
+        },
+        "2": {
+          "cosine": 0.998046875,
+          "l2": 1.2177734375
+        },
+        "3": {
+          "cosine": 0.9970703125,
+          "l2": 1.91015625
+        }
+      }
+    },
+    {
+      "prompt": "What is 81 divided by 9?",
+      "v7_prompt_len": 77,
+      "v8_prompt_len": 73,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.1796875
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 0.9208984375
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.5908203125
+        }
+      }
+    },
+    {
+      "prompt": "If 3x + 5 = 20, what is x?",
+      "v7_prompt_len": 83,
+      "v8_prompt_len": 79,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.177734375
+        },
+        "2": {
+          "cosine": 0.99609375,
+          "l2": 2.03515625
+        },
+        "3": {
+          "cosine": 0.99609375,
+          "l2": 2.23828125
+        }
+      }
+    },
+    {
+      "prompt": "If 4x - 6 = 10, what is x?",
+      "v7_prompt_len": 83,
+      "v8_prompt_len": 79,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.1640625
+        },
+        "2": {
+          "cosine": 0.99609375,
+          "l2": 2.005859375
+        },
+        "3": {
+          "cosine": 0.99609375,
+          "l2": 2.2421875
+        }
+      }
+    },
+    {
+      "prompt": "A rectangle has length 8 and width 3. What is its area?",
+      "v7_prompt_len": 83,
+      "v8_prompt_len": 79,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.271484375
+        },
+        "2": {
+          "cosine": 0.99560546875,
+          "l2": 2.0078125
+        },
+        "3": {
+          "cosine": 0.99609375,
+          "l2": 2.22265625
+        }
+      }
+    },
+    {
+      "prompt": "If a train travels 120 miles in 3 hours, what is its average speed?",
+      "v7_prompt_len": 87,
+      "v8_prompt_len": 83,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.3828125
+        },
+        "2": {
+          "cosine": 0.99951171875,
+          "l2": 1.0595703125
+        },
+        "3": {
+          "cosine": 0.99755859375,
+          "l2": 1.6923828125
+        }
+      }
+    },
+    {
+      "prompt": "If a store has 50 items and sells 18, how many are left?",
+      "v7_prompt_len": 86,
+      "v8_prompt_len": 82,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.25390625
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 0.8564453125
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.4619140625
+        }
+      }
+    },
+    {
+      "prompt": "What is the square root of 64?",
+      "v7_prompt_len": 77,
+      "v8_prompt_len": 73,
+      "per_layer": {
+        "6": {
+          "cosine": 0.9970703125,
+          "l2": 2.2890625
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 0.9111328125
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.59375
+        }
+      }
+    },
+    {
+      "prompt": "If 6 + x = 25, what is x?",
+      "v7_prompt_len": 81,
+      "v8_prompt_len": 77,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99853515625,
+          "l2": 1.8154296875
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.1494140625
+        },
+        "3": {
+          "cosine": 0.99755859375,
+          "l2": 1.5859375
+        }
+      }
+    },
+    {
+      "prompt": "If x / 5 = 7, what is x?",
+      "v7_prompt_len": 80,
+      "v8_prompt_len": 76,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99853515625,
+          "l2": 1.9970703125
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 0.9921875
+        },
+        "3": {
+          "cosine": 0.99755859375,
+          "l2": 1.6123046875
+        }
+      }
+    },
+    {
+      "prompt": "What is 14 percent of 200?",
+      "v7_prompt_len": 79,
+      "v8_prompt_len": 75,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.22265625
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 1.1953125
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.7646484375
+        }
+      }
+    },
+    {
+      "prompt": "What is 3/4 of 32?",
+      "v7_prompt_len": 78,
+      "v8_prompt_len": 74,
+      "per_layer": {
+        "6": {
+          "cosine": 0.998046875,
+          "l2": 2.25390625
+        },
+        "2": {
+          "cosine": 0.9990234375,
+          "l2": 1.00390625
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.6650390625
+        }
+      }
+    },
+    {
+      "prompt": "A triangle has angles 90 degrees and 45 degrees. What is the third angle?",
+      "v7_prompt_len": 87,
+      "v8_prompt_len": 83,
+      "per_layer": {
+        "6": {
+          "cosine": 0.99755859375,
+          "l2": 2.34765625
+        },
+        "2": {
+          "cosine": 0.99853515625,
+          "l2": 1.0654296875
+        },
+        "3": {
+          "cosine": 0.998046875,
+          "l2": 1.6591796875
+        }
+      }
+    }
+  ]
+}

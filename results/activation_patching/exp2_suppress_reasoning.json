@@ -1,0 +1,232 @@
+[
+  {
+    "prompt": "What is 5 + 3?",
+    "reasoning_baseline_tokens": 158,
+    "layer_results": {
+      "0": {
+        "tokens_generated": 45,
+        "token_change": -113
+      },
+      "1": {
+        "tokens_generated": 90,
+        "token_change": -68
+      },
+      "2": {
+        "tokens_generated": 57,
+        "token_change": -101
+      },
+      "3": {
+        "tokens_generated": 57,
+        "token_change": -101
+      },
+      "6": {
+        "tokens_generated": 60,
+        "token_change": -98
+      },
+      "10": {
+        "tokens_generated": 60,
+        "token_change": -98
+      },
+      "14": {
+        "tokens_generated": 106,
+        "token_change": -52
+      },
+      "18": {
+        "tokens_generated": 106,
+        "token_change": -52
+      },
+      "22": {
+        "tokens_generated": 100,
+        "token_change": -58
+      },
+      "26": {
+        "tokens_generated": 100,
+        "token_change": -58
+      }
+    }
+  },
+  {
+    "prompt": "If Alice has 8 apples and gives 3 to Bob, how many does Alice have?",
+    "reasoning_baseline_tokens": 114,
+    "layer_results": {
+      "0": {
+        "tokens_generated": 59,
+        "token_change": -55
+      },
+      "1": {
+        "tokens_generated": 59,
+        "token_change": -55
+      },
+      "2": {
+        "tokens_generated": 59,
+        "token_change": -55
+      },
+      "3": {
+        "tokens_generated": 59,
+        "token_change": -55
+      },
+      "6": {
+        "tokens_generated": 44,
+        "token_change": -70
+      },
+      "10": {
+        "tokens_generated": 76,
+        "token_change": -38
+      },
+      "14": {
+        "tokens_generated": 105,
+        "token_change": -9
+      },
+      "18": {
+        "tokens_generated": 119,
+        "token_change": 5
+      },
+      "22": {
+        "tokens_generated": 119,
+        "token_change": 5
+      },
+      "26": {
+        "tokens_generated": 105,
+        "token_change": -9
+      }
+    }
+  },
+  {
+    "prompt": "What is 12 divided by 4?",
+    "reasoning_baseline_tokens": 200,
+    "layer_results": {
+      "0": {
+        "tokens_generated": 135,
+        "token_change": -65
+      },
+      "1": {
+        "tokens_generated": 88,
+        "token_change": -112
+      },
+      "2": {
+        "tokens_generated": 71,
+        "token_change": -129
+      },
+      "3": {
+        "tokens_generated": 71,
+        "token_change": -129
+      },
+      "6": {
+        "tokens_generated": 71,
+        "token_change": -129
+      },
+      "10": {
+        "tokens_generated": 110,
+        "token_change": -90
+      },
+      "14": {
+        "tokens_generated": 141,
+        "token_change": -59
+      },
+      "18": {
+        "tokens_generated": 200,
+        "token_change": 0
+      },
+      "22": {
+        "tokens_generated": 200,
+        "token_change": 0
+      },
+      "26": {
+        "tokens_generated": 200,
+        "token_change": 0
+      }
+    }
+  },
+  {
+    "prompt": "A rectangle has length 5 and width 3. What is its area?",
+    "reasoning_baseline_tokens": 194,
+    "layer_results": {
+      "0": {
+        "tokens_generated": 101,
+        "token_change": -93
+      },
+      "1": {
+        "tokens_generated": 148,
+        "token_change": -46
+      },
+      "2": {
+        "tokens_generated": 99,
+        "token_change": -95
+      },
+      "3": {
+        "tokens_generated": 99,
+        "token_change": -95
+      },
+      "6": {
+        "tokens_generated": 95,
+        "token_change": -99
+      },
+      "10": {
+        "tokens_generated": 99,
+        "token_change": -95
+      },
+      "14": {
+        "tokens_generated": 158,
+        "token_change": -36
+      },
+      "18": {
+        "tokens_generated": 200,
+        "token_change": 6
+      },
+      "22": {
+        "tokens_generated": 196,
+        "token_change": 2
+      },
+      "26": {
+        "tokens_generated": 200,
+        "token_change": 6
+      }
+    }
+  },
+  {
+    "prompt": "If a train travels 60 miles in 2 hours, what is its average speed?",
+    "reasoning_baseline_tokens": 200,
+    "layer_results": {
+      "0": {
+        "tokens_generated": 136,
+        "token_change": -64
+      },
+      "1": {
+        "tokens_generated": 136,
+        "token_change": -64
+      },
+      "2": {
+        "tokens_generated": 136,
+        "token_change": -64
+      },
+      "3": {
+        "tokens_generated": 136,
+        "token_change": -64
+      },
+      "6": {
+        "tokens_generated": 136,
+        "token_change": -64
+      },
+      "10": {
+        "tokens_generated": 136,
+        "token_change": -64
+      },
+      "14": {
+        "tokens_generated": 198,
+        "token_change": -2
+      },
+      "18": {
+        "tokens_generated": 200,
+        "token_change": 0
+      },
+      "22": {
+        "tokens_generated": 200,
+        "token_change": 0
+      },
+      "26": {
+        "tokens_generated": 200,
+        "token_change": 0
+      }
+    }
+  }
+]

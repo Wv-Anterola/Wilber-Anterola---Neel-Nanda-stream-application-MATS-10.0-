@@ -1,0 +1,886 @@
+{
+  "summary": [
+    {
+      "layer": 0,
+      "avg_logp": -8.0328125,
+      "avg_rank": 200.8
+    },
+    {
+      "layer": 1,
+      "avg_logp": -9.64765625,
+      "avg_rank": 435.8
+    },
+    {
+      "layer": 2,
+      "avg_logp": -9.6453125,
+      "avg_rank": 517.2
+    },
+    {
+      "layer": 3,
+      "avg_logp": -9.7140625,
+      "avg_rank": 534.4
+    },
+    {
+      "layer": 4,
+      "avg_logp": -8.734375,
+      "avg_rank": 622.8
+    },
+    {
+      "layer": 5,
+      "avg_logp": -9.8046875,
+      "avg_rank": 1116.2
+    },
+    {
+      "layer": 6,
+      "avg_logp": -7.7796875,
+      "avg_rank": 186.4
+    },
+    {
+      "layer": 7,
+      "avg_logp": -8.02734375,
+      "avg_rank": 181.6
+    },
+    {
+      "layer": 8,
+      "avg_logp": -8.60234375,
+      "avg_rank": 690.8
+    },
+    {
+      "layer": 9,
+      "avg_logp": -8.62890625,
+      "avg_rank": 746.4
+    },
+    {
+      "layer": 10,
+      "avg_logp": -10.18828125,
+      "avg_rank": 4246.6
+    },
+    {
+      "layer": 11,
+      "avg_logp": -8.63515625,
+      "avg_rank": 990.0
+    },
+    {
+      "layer": 12,
+      "avg_logp": -8.35,
+      "avg_rank": 1057.8
+    },
+    {
+      "layer": 13,
+      "avg_logp": -7.59453125,
+      "avg_rank": 533.4
+    },
+    {
+      "layer": 14,
+      "avg_logp": -6.97578125,
+      "avg_rank": 293.0
+    },
+    {
+      "layer": 15,
+      "avg_logp": -6.8484375,
+      "avg_rank": 220.8
+    },
+    {
+      "layer": 16,
+      "avg_logp": -8.59765625,
+      "avg_rank": 506.8
+    },
+    {
+      "layer": 17,
+      "avg_logp": -9.18671875,
+      "avg_rank": 1117.6
+    },
+    {
+      "layer": 18,
+      "avg_logp": -8.105859375,
+      "avg_rank": 425.0
+    },
+    {
+      "layer": 19,
+      "avg_logp": -12.878125,
+      "avg_rank": 2690.0
+    },
+    {
+      "layer": 20,
+      "avg_logp": -13.43203125,
+      "avg_rank": 2673.2
+    },
+    {
+      "layer": 21,
+      "avg_logp": -12.5390625,
+      "avg_rank": 863.4
+    },
+    {
+      "layer": 22,
+      "avg_logp": -17.784375,
+      "avg_rank": 987.2
+    },
+    {
+      "layer": 23,
+      "avg_logp": -17.228125,
+      "avg_rank": 729.0
+    },
+    {
+      "layer": 24,
+      "avg_logp": -14.7453125,
+      "avg_rank": 315.0
+    },
+    {
+      "layer": 25,
+      "avg_logp": -12.684375,
+      "avg_rank": 270.0
+    },
+    {
+      "layer": 26,
+      "avg_logp": -7.86484375,
+      "avg_rank": 65.6
+    },
+    {
+      "layer": 27,
+      "avg_logp": -10.74453125,
+      "avg_rank": 133.4
+    }
+  ],
+  "examples": [
+    {
+      "prompt": "What is 5 + 3?",
+      "answer": "8",
+      "answer_token_id": 23,
+      "position": 70,
+      "per_layer": [
+        {
+          "layer": 0,
+          "logp": -9.421875,
+          "rank": 411
+        },
+        {
+          "layer": 1,
+          "logp": -11.625,
+          "rank": 998
+        },
+        {
+          "layer": 2,
+          "logp": -12.203125,
+          "rank": 1562
+        },
+        {
+          "layer": 3,
+          "logp": -11.890625,
+          "rank": 1563
+        },
+        {
+          "layer": 4,
+          "logp": -11.4453125,
+          "rank": 1788
+        },
+        {
+          "layer": 5,
+          "logp": -11.5625,
+          "rank": 2541
+        },
+        {
+          "layer": 6,
+          "logp": -8.53125,
+          "rank": 228
+        },
+        {
+          "layer": 7,
+          "logp": -9.4375,
+          "rank": 330
+        },
+        {
+          "layer": 8,
+          "logp": -9.875,
+          "rank": 1149
+        },
+        {
+          "layer": 9,
+          "logp": -9.6015625,
+          "rank": 936
+        },
+        {
+          "layer": 10,
+          "logp": -11.46875,
+          "rank": 5485
+        },
+        {
+          "layer": 11,
+          "logp": -9.8828125,
+          "rank": 1504
+        },
+        {
+          "layer": 12,
+          "logp": -9.890625,
+          "rank": 2051
+        },
+        {
+          "layer": 13,
+          "logp": -8.265625,
+          "rank": 536
+        },
+        {
+          "layer": 14,
+          "logp": -8.0859375,
+          "rank": 427
+        },
+        {
+          "layer": 15,
+          "logp": -7.52734375,
+          "rank": 185
+        },
+        {
+          "layer": 16,
+          "logp": -10.4140625,
+          "rank": 699
+        },
+        {
+          "layer": 17,
+          "logp": -11.984375,
+          "rank": 2129
+        },
+        {
+          "layer": 18,
+          "logp": -10.8828125,
+          "rank": 763
+        },
+        {
+          "layer": 19,
+          "logp": -16.3125,
+          "rank": 5354
+        },
+        {
+          "layer": 20,
+          "logp": -16.59375,
+          "rank": 4195
+        },
+        {
+          "layer": 21,
+          "logp": -14.6953125,
+          "rank": 1182
+        },
+        {
+          "layer": 22,
+          "logp": -19.1875,
+          "rank": 817
+        },
+        {
+          "layer": 23,
+          "logp": -18.65625,
+          "rank": 595
+        },
+        {
+          "layer": 24,
+          "logp": -16.53125,
+          "rank": 304
+        },
+        {
+          "layer": 25,
+          "logp": -13.8671875,
+          "rank": 266
+        },
+        {
+          "layer": 26,
+          "logp": -8.1953125,
+          "rank": 64
+        },
+        {
+          "layer": 27,
+          "logp": -11.203125,
+          "rank": 95
+        }
+      ]
+    },
+    {
+      "prompt": "If Alice has 8 apples and gives 3 to Bob, how many does she have?",
+      "answer": "5",
+      "answer_token_id": 20,
+      "position": 81,
+      "per_layer": [
+        {
+          "layer": 0,
+          "logp": -8.6953125,
+          "rank": 247
+        },
+        {
+          "layer": 1,
+          "logp": -10.390625,
+          "rank": 481
+        },
+        {
+          "layer": 2,
+          "logp": -9.609375,
+          "rank": 268
+        },
+        {
+          "layer": 3,
+          "logp": -9.609375,
+          "rank": 295
+        },
+        {
+          "layer": 4,
+          "logp": -8.5234375,
+          "rank": 333
+        },
+        {
+          "layer": 5,
+          "logp": -9.1953125,
+          "rank": 591
+        },
+        {
+          "layer": 6,
+          "logp": -8.296875,
+          "rank": 279
+        },
+        {
+          "layer": 7,
+          "logp": -8.53125,
+          "rank": 188
+        },
+        {
+          "layer": 8,
+          "logp": -9.9921875,
+          "rank": 1366
+        },
+        {
+          "layer": 9,
+          "logp": -9.8359375,
+          "rank": 1214
+        },
+        {
+          "layer": 10,
+          "logp": -11.171875,
+          "rank": 4690
+        },
+        {
+          "layer": 11,
+          "logp": -9.15625,
+          "rank": 862
+        },
+        {
+          "layer": 12,
+          "logp": -9.3359375,
+          "rank": 1344
+        },
+        {
+          "layer": 13,
+          "logp": -8.0703125,
+          "rank": 476
+        },
+        {
+          "layer": 14,
+          "logp": -7.51953125,
+          "rank": 252
+        },
+        {
+          "layer": 15,
+          "logp": -7.9140625,
+          "rank": 263
+        },
+        {
+          "layer": 16,
+          "logp": -9.0,
+          "rank": 280
+        },
+        {
+          "layer": 17,
+          "logp": -9.546875,
+          "rank": 347
+        },
+        {
+          "layer": 18,
+          "logp": -8.28125,
+          "rank": 135
+        },
+        {
+          "layer": 19,
+          "logp": -13.3203125,
+          "rank": 1426
+        },
+        {
+          "layer": 20,
+          "logp": -14.1875,
+          "rank": 1465
+        },
+        {
+          "layer": 21,
+          "logp": -12.2109375,
+          "rank": 405
+        },
+        {
+          "layer": 22,
+          "logp": -17.40625,
+          "rank": 604
+        },
+        {
+          "layer": 23,
+          "logp": -16.78125,
+          "rank": 391
+        },
+        {
+          "layer": 24,
+          "logp": -14.6484375,
+          "rank": 262
+        },
+        {
+          "layer": 25,
+          "logp": -13.1953125,
+          "rank": 271
+        },
+        {
+          "layer": 26,
+          "logp": -8.8984375,
+          "rank": 92
+        },
+        {
+          "layer": 27,
+          "logp": -12.8203125,
+          "rank": 220
+        }
+      ]
+    },
+    {
+      "prompt": "What is 12 divided by 4?",
+      "answer": "3",
+      "answer_token_id": 18,
+      "position": 72,
+      "per_layer": [
+        {
+          "layer": 0,
+          "logp": -7.6953125,
+          "rank": 129
+        },
+        {
+          "layer": 1,
+          "logp": -9.28125,
+          "rank": 230
+        },
+        {
+          "layer": 2,
+          "logp": -9.390625,
+          "rank": 236
+        },
+        {
+          "layer": 3,
+          "logp": -8.5546875,
+          "rank": 126
+        },
+        {
+          "layer": 4,
+          "logp": -6.44921875,
+          "rank": 61
+        },
+        {
+          "layer": 5,
+          "logp": -9.265625,
+          "rank": 522
+        },
+        {
+          "layer": 6,
+          "logp": -8.2421875,
+          "rank": 185
+        },
+        {
+          "layer": 7,
+          "logp": -7.3359375,
+          "rank": 89
+        },
+        {
+          "layer": 8,
+          "logp": -7.6328125,
+          "rank": 230
+        },
+        {
+          "layer": 9,
+          "logp": -7.67578125,
+          "rank": 229
+        },
+        {
+          "layer": 10,
+          "logp": -7.84765625,
+          "rank": 323
+        },
+        {
+          "layer": 11,
+          "logp": -7.21484375,
+          "rank": 137
+        },
+        {
+          "layer": 12,
+          "logp": -7.05078125,
+          "rank": 172
+        },
+        {
+          "layer": 13,
+          "logp": -6.484375,
+          "rank": 84
+        },
+        {
+          "layer": 14,
+          "logp": -5.89453125,
+          "rank": 33
+        },
+        {
+          "layer": 15,
+          "logp": -5.41015625,
+          "rank": 16
+        },
+        {
+          "layer": 16,
+          "logp": -7.15234375,
+          "rank": 75
+        },
+        {
+          "layer": 17,
+          "logp": -7.328125,
+          "rank": 102
+        },
+        {
+          "layer": 18,
+          "logp": -6.55078125,
+          "rank": 50
+        },
+        {
+          "layer": 19,
+          "logp": -12.03125,
+          "rank": 789
+        },
+        {
+          "layer": 20,
+          "logp": -12.8125,
+          "rank": 806
+        },
+        {
+          "layer": 21,
+          "logp": -13.0,
+          "rank": 365
+        },
+        {
+          "layer": 22,
+          "logp": -18.390625,
+          "rank": 427
+        },
+        {
+          "layer": 23,
+          "logp": -18.890625,
+          "rank": 627
+        },
+        {
+          "layer": 24,
+          "logp": -15.828125,
+          "rank": 262
+        },
+        {
+          "layer": 25,
+          "logp": -14.0,
+          "rank": 340
+        },
+        {
+          "layer": 26,
+          "logp": -7.87890625,
+          "rank": 48
+        },
+        {
+          "layer": 27,
+          "logp": -11.671875,
+          "rank": 110
+        }
+      ]
+    },
+    {
+      "prompt": "A rectangle has length 5 and width 3. What is its area?",
+      "answer": "15",
+      "answer_token_id": 16,
+      "position": 78,
+      "per_layer": [
+        {
+          "layer": 0,
+          "logp": -6.15625,
+          "rank": 34
+        },
+        {
+          "layer": 1,
+          "logp": -6.76953125,
+          "rank": 32
+        },
+        {
+          "layer": 2,
+          "logp": -6.4921875,
+          "rank": 16
+        },
+        {
+          "layer": 3,
+          "logp": -8.0,
+          "rank": 78
+        },
+        {
+          "layer": 4,
+          "logp": -7.09765625,
+          "rank": 95
+        },
+        {
+          "layer": 5,
+          "logp": -8.1875,
+          "rank": 230
+        },
+        {
+          "layer": 6,
+          "logp": -5.4765625,
+          "rank": 20
+        },
+        {
+          "layer": 7,
+          "logp": -5.70703125,
+          "rank": 16
+        },
+        {
+          "layer": 8,
+          "logp": -6.51953125,
+          "rank": 95
+        },
+        {
+          "layer": 9,
+          "logp": -6.078125,
+          "rank": 58
+        },
+        {
+          "layer": 10,
+          "logp": -7.9921875,
+          "rank": 367
+        },
+        {
+          "layer": 11,
+          "logp": -6.453125,
+          "rank": 61
+        },
+        {
+          "layer": 12,
+          "logp": -5.85546875,
+          "rank": 47
+        },
+        {
+          "layer": 13,
+          "logp": -5.72265625,
+          "rank": 38
+        },
+        {
+          "layer": 14,
+          "logp": -4.74609375,
+          "rank": 11
+        },
+        {
+          "layer": 15,
+          "logp": -4.3203125,
+          "rank": 5
+        },
+        {
+          "layer": 16,
+          "logp": -5.3671875,
+          "rank": 17
+        },
+        {
+          "layer": 17,
+          "logp": -4.47265625,
+          "rank": 11
+        },
+        {
+          "layer": 18,
+          "logp": -3.384765625,
+          "rank": 4
+        },
+        {
+          "layer": 19,
+          "logp": -8.0,
+          "rank": 81
+        },
+        {
+          "layer": 20,
+          "logp": -7.47265625,
+          "rank": 42
+        },
+        {
+          "layer": 21,
+          "logp": -5.7109375,
+          "rank": 22
+        },
+        {
+          "layer": 22,
+          "logp": -12.328125,
+          "rank": 45
+        },
+        {
+          "layer": 23,
+          "logp": -11.484375,
+          "rank": 43
+        },
+        {
+          "layer": 24,
+          "logp": -9.71875,
+          "rank": 31
+        },
+        {
+          "layer": 25,
+          "logp": -8.484375,
+          "rank": 36
+        },
+        {
+          "layer": 26,
+          "logp": -4.4375,
+          "rank": 9
+        },
+        {
+          "layer": 27,
+          "logp": -5.09765625,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "prompt": "If 2x = 14, what is x?",
+      "answer": "7",
+      "answer_token_id": 22,
+      "position": 75,
+      "per_layer": [
+        {
+          "layer": 0,
+          "logp": -8.1953125,
+          "rank": 183
+        },
+        {
+          "layer": 1,
+          "logp": -10.171875,
+          "rank": 438
+        },
+        {
+          "layer": 2,
+          "logp": -10.53125,
+          "rank": 504
+        },
+        {
+          "layer": 3,
+          "logp": -10.515625,
+          "rank": 610
+        },
+        {
+          "layer": 4,
+          "logp": -10.15625,
+          "rank": 837
+        },
+        {
+          "layer": 5,
+          "logp": -10.8125,
+          "rank": 1697
+        },
+        {
+          "layer": 6,
+          "logp": -8.3515625,
+          "rank": 220
+        },
+        {
+          "layer": 7,
+          "logp": -9.125,
+          "rank": 285
+        },
+        {
+          "layer": 8,
+          "logp": -8.9921875,
+          "rank": 614
+        },
+        {
+          "layer": 9,
+          "logp": -9.953125,
+          "rank": 1295
+        },
+        {
+          "layer": 10,
+          "logp": -12.4609375,
+          "rank": 10368
+        },
+        {
+          "layer": 11,
+          "logp": -10.46875,
+          "rank": 2386
+        },
+        {
+          "layer": 12,
+          "logp": -9.6171875,
+          "rank": 1675
+        },
+        {
+          "layer": 13,
+          "logp": -9.4296875,
+          "rank": 1533
+        },
+        {
+          "layer": 14,
+          "logp": -8.6328125,
+          "rank": 742
+        },
+        {
+          "layer": 15,
+          "logp": -9.0703125,
+          "rank": 635
+        },
+        {
+          "layer": 16,
+          "logp": -11.0546875,
+          "rank": 1463
+        },
+        {
+          "layer": 17,
+          "logp": -12.6015625,
+          "rank": 2999
+        },
+        {
+          "layer": 18,
+          "logp": -11.4296875,
+          "rank": 1173
+        },
+        {
+          "layer": 19,
+          "logp": -14.7265625,
+          "rank": 5800
+        },
+        {
+          "layer": 20,
+          "logp": -16.09375,
+          "rank": 6858
+        },
+        {
+          "layer": 21,
+          "logp": -17.078125,
+          "rank": 2343
+        },
+        {
+          "layer": 22,
+          "logp": -21.609375,
+          "rank": 3043
+        },
+        {
+          "layer": 23,
+          "logp": -20.328125,
+          "rank": 1989
+        },
+        {
+          "layer": 24,
+          "logp": -17.0,
+          "rank": 716
+        },
+        {
+          "layer": 25,
+          "logp": -13.875,
+          "rank": 437
+        },
+        {
+          "layer": 26,
+          "logp": -9.9140625,
+          "rank": 115
+        },
+        {
+          "layer": 27,
+          "logp": -12.9296875,
+          "rank": 234
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- 2026-01-02 10:07:24 | layers_6_2_3 | verdict=EFFECTIVE | token_red=79.8 | marker_red=3.1 | maintained=0.96
+- 2026-01-02 10:20:42 | layer_6 | verdict=EFFECTIVE | token_red=69.9 | marker_red=3.7 | maintained=0.96
+- 2026-01-02 10:33:53 | layer_2 | verdict=EFFECTIVE | token_red=76.6 | marker_red=2.9 | maintained=0.96
+- 2026-01-02 10:47:19 | layer_3 | verdict=EFFECTIVE | token_red=77.1 | marker_red=3.3 | maintained=0.96

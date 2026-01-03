@@ -1,0 +1,2672 @@
+{
+  "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "max_new_tokens": 200,
+  "patch_layers": [
+    6,
+    2,
+    3
+  ],
+  "attn_layers": [
+    2,
+    3,
+    6
+  ],
+  "examples": [
+    {
+      "prompt": "What is 7 + 5?",
+      "answer": "12",
+      "prompt_len": 71,
+      "conditions": {
+        "baseline": {
+          "final_pos": 158,
+          "answer_pos": null,
+          "pre_final_pos": 157,
+          "pre_answer_pos": null,
+          "end_pos": 165,
+          "output_preview": "Question: What is 7 + 5?\n\nLet me think through this step by step:\nassistant\nSure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 5.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with the first number: 7\n   - Add the second number: 7 + 5 = 12\n\nSo, the final answer is: 12."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 270,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+      "answer": "12",
+      "prompt_len": 82,
+      "conditions": {
+        "baseline": {
+          "final_pos": 175,
+          "answer_pos": null,
+          "pre_final_pos": 174,
+          "pre_answer_pos": null,
+          "end_pos": 180,
+          "output_preview": " much does she have left?\n\nLet me think through this step by step:\nassistant\nSure, let's break it down step by step:\n\n1. **Initial Amount**: Sarah starts with 20 dollars.\n2. **Amount Spent**: Sarah spends 8 dollars.\n3. **Calculation**: To find out how much Sarah has left, we subtract the amount she spent from the initial amount.\n\nSo, the calculation is:\n\\[ 20 - 8 = 12 \\]\n\nTherefore, Sarah has 12 dollars left.\n\nFinal answer: 12"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 281,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 6 times 4?",
+      "answer": "24",
+      "prompt_len": 71,
+      "conditions": {
+        "baseline": {
+          "final_pos": 177,
+          "answer_pos": null,
+          "pre_final_pos": 176,
+          "pre_answer_pos": null,
+          "end_pos": 182,
+          "output_preview": " step:\nassistant\nSure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 6 and 4.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 6 times 4 is the same as adding 6 to itself 4 times.\n   - 6 + 6 + 6 + 6 = 24\n\nSo, 6 times 4 equals 24.\n\nFinal answer: 24"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 270,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "A square has side length 5. What is its area?",
+      "answer": "25",
+      "prompt_len": 76,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 275,
+          "output_preview": " \\[\n     A = \\text{side length} \\times \\text{side length}\n     \\]\n   - In this case, the side length is 5.\n\n3. **Substitute the given side length into the formula:**\n   - The side length is 5, so we substitute 5 for the side length in the formula:\n     \\[\n     A = 5 \\times 5\n     \\]\n\n4. **Perform the multiplication:**\n   - Multiply 5 by 5:\n     \\[\n     5 \\times 5 = 25\n    "
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 275,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If 2x = 14, what is x?",
+      "answer": "7",
+      "prompt_len": 76,
+      "conditions": {
+        "baseline": {
+          "final_pos": 218,
+          "answer_pos": 225,
+          "pre_final_pos": 217,
+          "pre_answer_pos": 224,
+          "end_pos": 227,
+          "output_preview": "]\n\n2. To isolate \\(x\\), we need to divide both sides of the equation by 2. This is because division is the inverse operation of multiplication, and it will help us get \\(x\\) by itself on one side of the equation.\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 7\n   \\]\n\nSo, the value of \\(x\\) is 7.\n\nFinal answer: \\(x = 7\\)."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 275,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 100 divided by 4?",
+      "answer": "25",
+      "prompt_len": 74,
+      "conditions": {
+        "baseline": {
+          "final_pos": 258,
+          "answer_pos": null,
+          "pre_final_pos": 257,
+          "pre_answer_pos": null,
+          "end_pos": 273,
+          "output_preview": " 4 times 25 equals 100).\n\n3. **Perform the Division**: To be precise, we can use long division or a calculator to find the exact result.\n\n4. **Long Division**:\n   - 4 goes into 100 twenty-five times because \\(4 \\times 25 = 100\\).\n\n5. **Check the Result**: \n   - 4 times 25 is indeed 100, so our estimate was correct.\n\n6. **Final Answer**: The exact result of 100 divided by 4 is"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 273,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+      "answer": "60",
+      "prompt_len": 84,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 283,
+          "output_preview": " to the properties of triangles, the sum of all three angles must equal 180 degrees. So, we can write the equation:\n   \\[\n   60^\\circ + 60^\\circ + x = 180^\\circ\n   \\]\n\n3. **Simplify the equation**: Combine the known angles:\n   \\[\n   120^\\circ + x = 180^\\circ\n   \\]\n\n4. **Solve for \\( x \\)**: Subtract 120 degrees from both sides of the equation to isolate \\( x \\"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 283,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+      "answer": "7",
+      "prompt_len": 83,
+      "conditions": {
+        "baseline": {
+          "final_pos": 179,
+          "answer_pos": 186,
+          "pre_final_pos": 178,
+          "pre_answer_pos": 185,
+          "end_pos": 188,
+          "output_preview": " me think through this step by step:\nassistant\nSure, let's break it down step by step:\n\n1. **Initial number of apples**: Bob starts with 3 apples.\n2. **Apples given by Ann**: Ann gives Bob 4 more apples.\n3. **Total number of apples**: To find the total number of apples Bob has, we add the apples he initially had to the apples Ann gave him.\n\nSo, we perform the addition:\n\\[ 3 + 4 = 7 \\]\n\nTherefore, the final answer is: Bob has 7 apples."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 282,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is the square root of 49?",
+      "answer": "7",
+      "prompt_len": 73,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 272,
+          "output_preview": " We need to find the square root of 49. This means we are looking for a number that, when squared, equals 49.\n\n3. **List the possible square roots**: We know that 7 * 7 = 49, and 3 * 3 = 9. Since 49 is a perfect square, it has two square roots: 7 and -7. However, when we talk about the square root of a positive number, we typically mean the positive root.\n\n4. **Conclusion**: The square root of 49 is 7.\n\n"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 272,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If 5 + x = 13, what is x?",
+      "answer": "8",
+      "prompt_len": 77,
+      "conditions": {
+        "baseline": {
+          "final_pos": 207,
+          "answer_pos": 214,
+          "pre_final_pos": 206,
+          "pre_answer_pos": 213,
+          "end_pos": 216,
+          "output_preview": " \\[\n   5 + x = 13\n   \\]\n\n2. To isolate \\( x \\), we need to get rid of the 5 on the left side of the equation. We do this by subtracting 5 from both sides:\n   \\[\n   5 + x - 5 = 13 - 5\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\( x \\) is 8.\n\nFinal answer: \\( x = 8 \\)"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 276,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 9 + 8?",
+      "answer": "17",
+      "prompt_len": 71,
+      "conditions": {
+        "baseline": {
+          "final_pos": 158,
+          "answer_pos": null,
+          "pre_final_pos": 157,
+          "pre_answer_pos": null,
+          "end_pos": 164,
+          "output_preview": ">.\n\nQuestion: What is 9 + 8?\n\nLet me think through this step by step:\nassistant\nSure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 9 and 8.\n2. **Understand the operation**: We need to add these two numbers together.\n3. **Perform the addition**: \n   - Start with 9.\n   - Add 8 to 9.\n   - 9 + 8 = 17\n\nSo, the final answer is 17."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 270,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 15 - 6?",
+      "answer": "9",
+      "prompt_len": 72,
+      "conditions": {
+        "baseline": {
+          "final_pos": 164,
+          "answer_pos": 168,
+          "pre_final_pos": 163,
+          "pre_answer_pos": 167,
+          "end_pos": 169,
+          "output_preview": " 15 - 6?\n\nLet me think through this step by step:\nassistant\nSure, let's break it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 15 and 6.\n2. **Understand the operation**: We need to subtract 6 from 15.\n3. **Perform the subtraction**: \n   - Start with 15.\n   - Subtract 6 from 15.\n   - 15 - 6 = 9\n\nSo, the final answer is 9."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 271,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 7 times 8?",
+      "answer": "56",
+      "prompt_len": 71,
+      "conditions": {
+        "baseline": {
+          "final_pos": 189,
+          "answer_pos": null,
+          "pre_final_pos": 188,
+          "pre_answer_pos": null,
+          "end_pos": 194,
+          "output_preview": " it down step by step:\n\n1. **Identify the numbers involved**: We have two numbers, 7 and 8.\n2. **Understand the operation**: We need to multiply these two numbers together.\n3. **Perform the multiplication**: \n   - 7 times 8 is the same as 7 added to itself 8 times.\n   - 7 + 7 + 7 + 7 + 7 + 7 + 7 + 7 = 56\n\nSo, 7 times 8 equals 56.\n\nFinal answer: 56"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 270,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 81 divided by 9?",
+      "answer": "9",
+      "prompt_len": 73,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 272,
+          "output_preview": " - 9 times 10 is 90.\n   - 9 times 11 is 99.\n   - 9 times 12 is 108.\n\n   Since 90 is less than 81 and 99 is more than 81, 9 fits into 81 at least once but not more than twice.\n\n3. **Calculation**: To find the exact number, we can perform the division:\n   - 81 \u00f7 9 = 9\n\n4. **Verification**: To verify, we can multiply "
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 272,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If 3x + 5 = 20, what is x?",
+      "answer": "5",
+      "prompt_len": 79,
+      "conditions": {
+        "baseline": {
+          "final_pos": 267,
+          "answer_pos": 274,
+          "pre_final_pos": 266,
+          "pre_answer_pos": 273,
+          "end_pos": 276,
+          "output_preview": " 5\n   \\]\n   Simplifying this, we get:\n   \\[\n   3x = 15\n   \\]\n\n3. Now, to solve for \\(x\\), we need to divide both sides of the equation by 3:\n   \\[\n   \\frac{3x}{3} = \\frac{15}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 5\n   \\]\n\nSo, the solution is \\(x = 5\\).\n\nFinal answer: \\(x = 5\\)."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 278,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If 4x - 6 = 10, what is x?",
+      "answer": "4",
+      "prompt_len": 79,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 278,
+          "output_preview": " 4x - 6 + 6 = 10 + 6\n   \\]\n   Simplifying this, we get:\n   \\[\n   4x = 16\n   \\]\n\n3. Now, to solve for \\(x\\), we need to divide both sides of the equation by 4:\n   \\[\n   \\frac{4x}{4} = \\frac{16}{4}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 4\n   \\]\n\nSo, the solution is \\(x = "
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 278,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "A rectangle has length 8 and width 3. What is its area?",
+      "answer": "24",
+      "prompt_len": 79,
+      "conditions": {
+        "baseline": {
+          "final_pos": 233,
+          "answer_pos": null,
+          "pre_final_pos": 232,
+          "pre_answer_pos": null,
+          "end_pos": 255,
+          "output_preview": " The area \\( A \\) of a rectangle is given by the formula:\n   \\[\n   A = \\text{length} \\times \\text{width}\n   \\]\n\n3. **Substitute the given values into the formula:**\n   \\[\n   A = 8 \\times 3\n   \\]\n\n4. **Perform the multiplication:**\n   \\[\n   8 \\times 3 = 24\n   \\]\n\n5. **State the final answer:**\n   The area of the rectangle is 24 square units.\n\nFinal answer: 24"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 278,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If a train travels 120 miles in 3 hours, what is its average speed?",
+      "answer": "40",
+      "prompt_len": 83,
+      "conditions": {
+        "baseline": {
+          "final_pos": 270,
+          "answer_pos": null,
+          "pre_final_pos": 269,
+          "pre_answer_pos": null,
+          "end_pos": 279,
+          "output_preview": "text{Total Distance}}{\\text{Total Time}}\n   \\]\n\n3. **Plug in the given values:**\n   \\[\n   \\text{Average Speed} = \\frac{120 \\text{ miles}}{3 \\text{ hours}}\n   \\]\n\n4. **Perform the division:**\n   \\[\n   \\text{Average Speed} = 40 \\text{ miles per hour}\n   \\]\n\n5. **Conclusion:**\n   The average speed of the train is 40 miles per hour.\n\nFinal answer: 40 miles per hour."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 282,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If a store has 50 items and sells 18, how many are left?",
+      "answer": "32",
+      "prompt_len": 82,
+      "conditions": {
+        "baseline": {
+          "final_pos": 230,
+          "answer_pos": null,
+          "pre_final_pos": 229,
+          "pre_answer_pos": null,
+          "end_pos": 240,
+          "output_preview": "3. **Calculation**: To find out how many items are left, we subtract the number of items sold from the initial count.\n   \\[\n   \\text{Items left} = \\text{Initial count} - \\text{Items sold}\n   \\]\n   \\[\n   \\text{Items left} = 50 - 18\n   \\]\n4. **Subtraction**: Perform the subtraction.\n   \\[\n   50 - 18 = 32\n   \\]\n\nSo, the final answer is: 32 items are left."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 281,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is the square root of 64?",
+      "answer": "8",
+      "prompt_len": 73,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 272,
+          "output_preview": "'re working with**: In this case, we're looking for the square root of 64.\n\n3. **Consider the properties of square roots**: The square root of a number is always positive. For example, the square root of 4 is 2, not -2.\n\n4. **Estimate the square root**: We know that 8 * 8 = 64, so the square root of 64 must be 8. This is because 8 is the number that, when squared, gives 64.\n\n5. **Verify the calculation**: Let's check"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 272,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If 6 + x = 25, what is x?",
+      "answer": "19",
+      "prompt_len": 77,
+      "conditions": {
+        "baseline": {
+          "final_pos": 209,
+          "answer_pos": null,
+          "pre_final_pos": 208,
+          "pre_answer_pos": null,
+          "end_pos": 219,
+          "output_preview": " 6 + x = 25\n   \\]\n\n2. To isolate \\( x \\), we need to get rid of the 6 on the left side of the equation. We do this by subtracting 6 from both sides:\n   \\[\n   6 + x - 6 = 25 - 6\n   \\]\n\n3. Simplifying both sides, we get:\n   \\[\n   x = 19\n   \\]\n\nSo, the value of \\( x \\) is 19.\n\nFinal answer: \\( x = 19 \\)."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 276,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "If x / 5 = 7, what is x?",
+      "answer": "35",
+      "prompt_len": 76,
+      "conditions": {
+        "baseline": {
+          "final_pos": 258,
+          "answer_pos": null,
+          "pre_final_pos": 257,
+          "pre_answer_pos": null,
+          "end_pos": 268,
+          "output_preview": " \\frac{x}{5} = 5 \\times 7\n   \\]\n\n3. On the left side, the 5 in the numerator and the 5 in the denominator cancel each other out, leaving us with just \\(x\\):\n   \\[\n   x = 5 \\times 7\n   \\]\n\n4. Now, we just need to perform the multiplication on the right side:\n   \\[\n   x = 35\n   \\]\n\nSo, the value of \\(x\\) is 35.\n\nFinal answer: \\(x = 35\\)."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 275,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 14 percent of 200?",
+      "answer": "28",
+      "prompt_len": 75,
+      "conditions": {
+        "baseline": {
+          "final_pos": 238,
+          "answer_pos": null,
+          "pre_final_pos": 237,
+          "pre_answer_pos": null,
+          "end_pos": 254,
+          "output_preview": " which can be written as 0.14.\n\n3. **Set up the multiplication**: \n   - We need to multiply 200 by 0.14.\n\n4. **Perform the multiplication**:\n   - \\( 200 \\times 0.14 = 28 \\)\n\n5. **Verify the calculation**: \n   - To ensure accuracy, you can check by dividing 28 by 0.14 to get back to 200.\n\nFinal answer: 14 percent of 200 is 28."
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 274,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "What is 3/4 of 32?",
+      "answer": "24",
+      "prompt_len": 74,
+      "conditions": {
+        "baseline": {
+          "final_pos": 234,
+          "answer_pos": null,
+          "pre_final_pos": 233,
+          "pre_answer_pos": null,
+          "end_pos": 239,
+          "output_preview": " by 3/4.\n\n2. **Set up the multiplication**: \n   \\[\n   \\frac{3}{4} \\times 32\n   \\]\n\n3. **Multiply the numerator by the whole number**:\n   \\[\n   3 \\times 32 = 96\n   \\]\n\n4. **Divide the result by the denominator**:\n   \\[\n   \\frac{96}{4} = 24\n   \\]\n\nSo, 3/4 of 32 is 24.\n\nFinal answer: 24"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 273,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    },
+    {
+      "prompt": "A triangle has angles 90 degrees and 45 degrees. What is the third angle?",
+      "answer": "45",
+      "prompt_len": 83,
+      "conditions": {
+        "baseline": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 282,
+          "output_preview": " 180 degrees.\n\n3. **Set up the equation**: Let the third angle be \\( x \\). According to the triangle angle sum property, we can write the equation:\n   \\[\n   90^\\circ + 45^\\circ + x = 180^\\circ\n   \\]\n\n4. **Solve for \\( x \\)**: Combine the known angles and solve for \\( x \\):\n   \\[\n   135^\\circ + x = 180^\\circ\n   \\]\n   Subtract 135 degrees from both sides"
+        },
+        "intervened": {
+          "final_pos": null,
+          "answer_pos": null,
+          "pre_final_pos": null,
+          "pre_answer_pos": null,
+          "end_pos": 282,
+          "output_preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "counts": {
+        "missing_final": 7,
+        "missing_answer": 20
+      },
+      "attn_pre_final": {
+        "2": {
+          "final_answer": 0.0022315408802795235,
+          "question": 0.010471844243393542,
+          "let_me_think": 0.007760636735990794,
+          "numbers": 0.0012072545899720745,
+          "operators": 0.0015128800637166744,
+          "other": 0.3897709458523558,
+          "generated": 0.5870448986611813
+        },
+        "3": {
+          "final_answer": 0.003995916688328976,
+          "question": 0.002673860976416432,
+          "let_me_think": 0.009317837077248863,
+          "numbers": 0.002121877265580519,
+          "operators": 0.0029368647052965967,
+          "other": 0.505966223744752,
+          "generated": 0.4729874139857486
+        },
+        "6": {
+          "final_answer": 0.0006552017967652136,
+          "question": 0.00035170454042358863,
+          "let_me_think": 0.001701246201671634,
+          "numbers": 0.0007520731834185059,
+          "operators": 0.00030152675909536424,
+          "other": 0.6585178935489565,
+          "generated": 0.33772035909069065
+        }
+      },
+      "attn_pre_answer": {
+        "2": {
+          "final_answer": 0.0018749708709719926,
+          "question": 0.0015002693521182664,
+          "let_me_think": 0.003067166507897016,
+          "numbers": 0.026662470719431515,
+          "operators": 0.0043864533621217556,
+          "other": 0.45949962069752087,
+          "generated": 0.503009046898226
+        },
+        "3": {
+          "final_answer": 0.001576113334512656,
+          "question": 0.0006412960141772098,
+          "let_me_think": 0.005328036833774164,
+          "numbers": 0.010482883301855095,
+          "operators": 0.005922721608492584,
+          "other": 0.46540632802927806,
+          "generated": 0.5106426103773699
+        },
+        "6": {
+          "final_answer": 0.0007154077425594115,
+          "question": 0.0002445733479782793,
+          "let_me_think": 0.0008623576515197278,
+          "numbers": 0.004815656538475096,
+          "operators": 0.0014602832697891087,
+          "other": 0.5795248541791443,
+          "generated": 0.4123768844862797
+        }
+      },
+      "attn_end": {
+        "2": {
+          "final_answer": 0.0020724864955189064,
+          "question": 0.0018789681762746114,
+          "let_me_think": 0.00435619806405338,
+          "numbers": 0.002878023041074016,
+          "operators": 0.0016602412185503588,
+          "other": 0.40171180074066676,
+          "generated": 0.5854422789878684
+        },
+        "3": {
+          "final_answer": 0.0020289007493471327,
+          "question": 0.0012172843121159346,
+          "let_me_think": 0.005236589133542278,
+          "numbers": 0.005282756262458648,
+          "operators": 0.002310154253952756,
+          "other": 0.4801456352541271,
+          "generated": 0.5037786784045855
+        },
+        "6": {
+          "final_answer": 0.0003837918563377606,
+          "question": 0.00018331856581026574,
+          "let_me_think": 0.0006360479454507066,
+          "numbers": 0.0017704218777985848,
+          "operators": 0.0004382645033929904,
+          "other": 0.5910993373757115,
+          "generated": 0.4054888183533023
+        }
+      },
+      "logit_lens_pre_answer": [
+        {
+          "layer": 0,
+          "avg_logp": -19.215625,
+          "avg_rank": 108134.4
+        },
+        {
+          "layer": 1,
+          "avg_logp": -17.0875,
+          "avg_rank": 73463.8
+        },
+        {
+          "layer": 2,
+          "avg_logp": -17.35625,
+          "avg_rank": 66526.4
+        },
+        {
+          "layer": 3,
+          "avg_logp": -17.815625,
+          "avg_rank": 82088.4
+        },
+        {
+          "layer": 4,
+          "avg_logp": -15.571875,
+          "avg_rank": 50837.0
+        },
+        {
+          "layer": 5,
+          "avg_logp": -14.046875,
+          "avg_rank": 38279.6
+        },
+        {
+          "layer": 6,
+          "avg_logp": -17.703125,
+          "avg_rank": 106090.6
+        },
+        {
+          "layer": 7,
+          "avg_logp": -17.38125,
+          "avg_rank": 101650.4
+        },
+        {
+          "layer": 8,
+          "avg_logp": -18.15625,
+          "avg_rank": 107885.4
+        },
+        {
+          "layer": 9,
+          "avg_logp": -17.3359375,
+          "avg_rank": 93720.8
+        },
+        {
+          "layer": 10,
+          "avg_logp": -17.0328125,
+          "avg_rank": 88655.2
+        },
+        {
+          "layer": 11,
+          "avg_logp": -16.1453125,
+          "avg_rank": 82254.4
+        },
+        {
+          "layer": 12,
+          "avg_logp": -16.734375,
+          "avg_rank": 90975.2
+        },
+        {
+          "layer": 13,
+          "avg_logp": -16.8234375,
+          "avg_rank": 96168.0
+        },
+        {
+          "layer": 14,
+          "avg_logp": -15.0609375,
+          "avg_rank": 55609.4
+        },
+        {
+          "layer": 15,
+          "avg_logp": -15.9328125,
+          "avg_rank": 79444.8
+        },
+        {
+          "layer": 16,
+          "avg_logp": -15.8046875,
+          "avg_rank": 80282.2
+        },
+        {
+          "layer": 17,
+          "avg_logp": -16.1796875,
+          "avg_rank": 82198.4
+        },
+        {
+          "layer": 18,
+          "avg_logp": -16.8234375,
+          "avg_rank": 97219.6
+        },
+        {
+          "layer": 19,
+          "avg_logp": -13.6703125,
+          "avg_rank": 26272.6
+        },
+        {
+          "layer": 20,
+          "avg_logp": -11.875,
+          "avg_rank": 12155.6
+        },
+        {
+          "layer": 21,
+          "avg_logp": -8.88671875,
+          "avg_rank": 1057.4
+        },
+        {
+          "layer": 22,
+          "avg_logp": -1.520703125,
+          "avg_rank": 1.8
+        },
+        {
+          "layer": 23,
+          "avg_logp": -0.018426227569580077,
+          "avg_rank": 1.0
+        },
+        {
+          "layer": 24,
+          "avg_logp": -0.008759427070617675,
+          "avg_rank": 1.0
+        },
+        {
+          "layer": 25,
+          "avg_logp": -0.0008684158325195313,
+          "avg_rank": 1.0
+        },
+        {
+          "layer": 26,
+          "avg_logp": -0.0008294105529785157,
+          "avg_rank": 1.0
+        },
+        {
+          "layer": 27,
+          "avg_logp": -0.00023946762084960937,
+          "avg_rank": 1.0
+        }
+      ],
+      "logit_lens_end": [
+        {
+          "layer": 0,
+          "avg_logp": -15.7040625,
+          "avg_rank": 40569.16
+        },
+        {
+          "layer": 1,
+          "avg_logp": -13.6665625,
+          "avg_rank": 26648.12
+        },
+        {
+          "layer": 2,
+          "avg_logp": -14.2784375,
+          "avg_rank": 36223.88
+        },
+        {
+          "layer": 3,
+          "avg_logp": -14.2409375,
+          "avg_rank": 42668.68
+        },
+        {
+          "layer": 4,
+          "avg_logp": -12.87859375,
+          "avg_rank": 27898.84
+        },
+        {
+          "layer": 5,
+          "avg_logp": -11.9996875,
+          "avg_rank": 20788.4
+        },
+        {
+          "layer": 6,
+          "avg_logp": -12.230625,
+          "avg_rank": 28317.32
+        },
+        {
+          "layer": 7,
+          "avg_logp": -11.82296875,
+          "avg_rank": 32819.96
+        },
+        {
+          "layer": 8,
+          "avg_logp": -11.5178125,
+          "avg_rank": 29350.56
+        },
+        {
+          "layer": 9,
+          "avg_logp": -11.148984375,
+          "avg_rank": 33854.56
+        },
+        {
+          "layer": 10,
+          "avg_logp": -11.48953125,
+          "avg_rank": 27172.88
+        },
+        {
+          "layer": 11,
+          "avg_logp": -11.01640625,
+          "avg_rank": 24877.04
+        },
+        {
+          "layer": 12,
+          "avg_logp": -10.53484375,
+          "avg_rank": 19290.24
+        },
+        {
+          "layer": 13,
+          "avg_logp": -11.32609375,
+          "avg_rank": 19525.72
+        },
+        {
+          "layer": 14,
+          "avg_logp": -11.53765625,
+          "avg_rank": 17709.96
+        },
+        {
+          "layer": 15,
+          "avg_logp": -13.4675,
+          "avg_rank": 20336.68
+        },
+        {
+          "layer": 16,
+          "avg_logp": -13.36625,
+          "avg_rank": 17343.92
+        },
+        {
+          "layer": 17,
+          "avg_logp": -15.1390625,
+          "avg_rank": 26623.48
+        },
+        {
+          "layer": 18,
+          "avg_logp": -17.0828125,
+          "avg_rank": 26465.36
+        },
+        {
+          "layer": 19,
+          "avg_logp": -26.869375,
+          "avg_rank": 31696.6
+        },
+        {
+          "layer": 20,
+          "avg_logp": -24.1846875,
+          "avg_rank": 36480.96
+        },
+        {
+          "layer": 21,
+          "avg_logp": -23.035,
+          "avg_rank": 18062.68
+        },
+        {
+          "layer": 22,
+          "avg_logp": -18.49955078125,
+          "avg_rank": 16082.36
+        },
+        {
+          "layer": 23,
+          "avg_logp": -17.109481678009033,
+          "avg_rank": 26459.76
+        },
+        {
+          "layer": 24,
+          "avg_logp": -16.611586351394653,
+          "avg_rank": 39286.4
+        },
+        {
+          "layer": 25,
+          "avg_logp": -18.311004643440246,
+          "avg_rank": 95748.12
+        },
+        {
+          "layer": 26,
+          "avg_logp": -14.358710403442382,
+          "avg_rank": 29801.52
+        },
+        {
+          "layer": 27,
+          "avg_logp": -23.359119601249695,
+          "avg_rank": 74970.2
+        }
+      ],
+      "head_by_phase": {
+        "pre_answer": {
+          "2": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.0005631482548778876,
+                0.0001941913067639689,
+                0.00201091409453511,
+                0.0017379268385411706,
+                0.0013243277771834983,
+                0.5776301858506485,
+                0.41653935466110853
+              ],
+              [
+                0.0006624883409131144,
+                0.0011842904990771786,
+                0.002940063878122601,
+                0.0005614190507913008,
+                0.0007415598411171231,
+                0.26162201898141574,
+                0.7322881536269051
+              ],
+              [
+                0.009570774715393781,
+                0.007087060064077377,
+                0.01583450477337465,
+                0.010735731711611152,
+                0.012064638314768672,
+                0.4705407559631567,
+                0.4741665461973753
+              ],
+              [
+                0.000788037435268052,
+                4.575408529490232e-05,
+                0.0007422865633948561,
+                0.2380997561616823,
+                0.0007718029768511769,
+                0.31718818206714794,
+                0.4423641784864095
+              ],
+              [
+                0.0007441271358402446,
+                0.0007631067303009332,
+                0.0019546842413546983,
+                0.013960464665433391,
+                0.002537596193724312,
+                0.5053882048493505,
+                0.4746518252555688
+              ],
+              [
+                0.005569132033269852,
+                0.00038304873305605724,
+                0.005216317660233472,
+                0.04445832534693182,
+                0.02876422116532922,
+                0.4240975682041153,
+                0.49151135143620195
+              ],
+              [
+                0.0011239448198466563,
+                0.0019015161786228418,
+                0.0023435758523191906,
+                0.0016093320402433165,
+                0.0029863670893973903,
+                0.6923615303916449,
+                0.2976737873501406
+              ],
+              [
+                0.0004784099830430932,
+                0.0018964010116178543,
+                0.0006365669760612036,
+                0.00043605785790532534,
+                0.00012445691188531783,
+                0.5224132671886356,
+                0.47401481683572655
+              ],
+              [
+                0.0005187086147998343,
+                0.00213260565942619,
+                0.0004863731924046988,
+                0.0021023153685746365,
+                7.876755017832693e-05,
+                0.5188057096873905,
+                0.4758754969082332
+              ],
+              [
+                0.001246681236079894,
+                0.0016967401024885476,
+                0.003171707745786989,
+                0.004146112356102094,
+                0.002690101062762551,
+                0.4169806913974753,
+                0.5700679535817471
+              ],
+              [
+                0.00022827704469818855,
+                0.0004233556363033131,
+                0.0006931744444500509,
+                0.0001763730459060753,
+                0.00015863178488189077,
+                0.38058523363387164,
+                0.6177349351885596
+              ],
+              [
+                0.0010059208376333117,
+                0.00029516221839003264,
+                0.000775828672726675,
+                0.0019258341894555996,
+                0.0003949696773815958,
+                0.42638210015539785,
+                0.5692201632507363
+              ]
+            ]
+          },
+          "3": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.00014703972171901115,
+                1.2413075403117091e-05,
+                4.158527317201788e-05,
+                0.00011403465864532337,
+                3.4376709241712436e-05,
+                0.6134780914466658,
+                0.3861725014311577
+              ],
+              [
+                2.6316243361179658e-05,
+                2.9665030524483882e-05,
+                9.232935921943408e-05,
+                0.00022121714450804575,
+                9.607260074062651e-05,
+                0.678202039378624,
+                0.32133232318229477
+              ],
+              [
+                4.218909964368578e-05,
+                4.115629343459659e-06,
+                1.1656727413375535e-05,
+                4.626412416204317e-05,
+                8.673155787515679e-05,
+                0.410345498969213,
+                0.5894635439077682
+              ],
+              [
+                4.9663492382023834e-05,
+                3.385552695363003e-05,
+                6.047612736210794e-05,
+                5.36157411829663e-05,
+                4.202231621235342e-05,
+                0.8527566088190707,
+                0.1470036925142751
+              ],
+              [
+                0.00020622995143639855,
+                0.00020620621653506533,
+                0.0006964746471567196,
+                0.007437598204705864,
+                0.0015520760709478055,
+                0.38844723814253257,
+                0.6014541762515819
+              ],
+              [
+                0.0001116367522172368,
+                7.647816037206212e-05,
+                0.0004256952797078384,
+                0.00017765431709904078,
+                0.00013478878661032923,
+                0.6407210091027846,
+                0.35835277144544847
+              ],
+              [
+                0.0007314626316656358,
+                0.0005932071129791438,
+                0.003096625865146052,
+                0.0051409974112175405,
+                0.00272364733973518,
+                0.21412335228105803,
+                0.7735907139525807
+              ],
+              [
+                0.006936030695214868,
+                0.000841959094395861,
+                0.013342064704920631,
+                0.08933971049264074,
+                0.03957949373871088,
+                0.44747724552089496,
+                0.40248346025837234
+              ],
+              [
+                0.0012181593483546749,
+                0.0007484566245693714,
+                0.010112752371060196,
+                0.0010719585392507725,
+                0.0019732923625269904,
+                0.15047146467144046,
+                0.8344038858801014
+              ],
+              [
+                0.0012470525805838406,
+                0.001462779170833528,
+                0.005745869447127916,
+                0.016873644758015872,
+                0.011776070087216794,
+                0.5141569305680604,
+                0.4487376408967975
+              ],
+              [
+                0.0003183784308930626,
+                0.0001796839358576108,
+                0.001151617156301654,
+                0.0020340131024568107,
+                0.003045322986872634,
+                0.2641254216269239,
+                0.729145539455169
+              ],
+              [
+                0.007879201066680252,
+                0.0035067325923591854,
+                0.029159295046702026,
+                0.0032838911283761263,
+                0.010028764745220542,
+                0.4105710358240685,
+                0.5355710753528911
+              ]
+            ]
+          },
+          "6": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.0055948015535250304,
+                0.0004523888521362096,
+                0.004726244063931517,
+                0.033363347756676376,
+                0.010435319750104099,
+                0.3050991776865658,
+                0.6403287300197917
+              ],
+              [
+                7.89107059233629e-06,
+                1.6119461605512696e-07,
+                5.285604406246591e-05,
+                0.004104051271133358,
+                0.0012578875383042031,
+                0.7510983095734838,
+                0.24347884680776488
+              ],
+              [
+                0.0005917690126807429,
+                0.0014207380299922079,
+                0.002266173802490812,
+                0.00032578166574239733,
+                0.00022474220459116622,
+                0.3597436776703489,
+                0.6354271118302677
+              ],
+              [
+                0.0008315515035064891,
+                0.0003385519405128434,
+                0.001895191091171,
+                0.0027929914940614253,
+                0.0007907712977612391,
+                0.8320330571375052,
+                0.16131791117950342
+              ],
+              [
+                0.0002527168417145731,
+                0.00010392604890512303,
+                0.0002831051841894805,
+                0.0030407950402150164,
+                0.0004307248256964158,
+                0.3188755384907604,
+                0.6770132182693487
+              ],
+              [
+                6.775579613531591e-05,
+                1.985471872103517e-05,
+                0.00011187118541045038,
+                2.4169110884031397e-05,
+                1.432342749225768e-05,
+                0.3389561718507828,
+                0.6608058757905994
+              ],
+              [
+                3.310868567041325e-05,
+                3.11354483528703e-05,
+                7.739364765697587e-05,
+                0.002313039171235687,
+                0.00012459205292145726,
+                0.27203444122295395,
+                0.7253862940551656
+              ],
+              [
+                0.0007905520469648764,
+                0.00046678003272973003,
+                0.00032496096810064046,
+                0.011029105883062584,
+                0.003054809792956803,
+                0.7878517223364156,
+                0.19648208035274592
+              ],
+              [
+                2.2367042669202418e-05,
+                1.0885247729675029e-05,
+                2.0198500093315807e-05,
+                1.6818750779457047e-05,
+                1.291338309385992e-05,
+                0.7914657246675804,
+                0.20845107419522996
+              ],
+              [
+                0.00013833105731464457,
+                5.264239734970033e-05,
+                8.042553817517728e-05,
+                0.0005060798655904363,
+                0.0005353617780201603,
+                0.9854302701208525,
+                0.013256969279878784
+              ],
+              [
+                0.00019947391783716739,
+                1.612544197087118e-05,
+                0.0004462666563142648,
+                0.0001982125016638747,
+                0.0004293087042242405,
+                0.7071637913508709,
+                0.291546805458961
+              ],
+              [
+                5.457438210214605e-05,
+                2.169082272303058e-05,
+                6.360513664063205e-05,
+                7.348595065650442e-05,
+                0.0002126444823034035,
+                0.504546368041612,
+                0.4950276965960995
+              ]
+            ]
+          }
+        },
+        "end": {
+          "2": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.0002070789849437915,
+                0.00031836215781368084,
+                0.0008519982685645644,
+                0.000565589627672125,
+                0.00026321810112193587,
+                0.3620635725476118,
+                0.6357301746499681
+              ],
+              [
+                0.0004906668977491791,
+                0.0010596570808411342,
+                0.0020004760214942506,
+                0.00041956108206704813,
+                0.00030293679155875,
+                0.19081948914136546,
+                0.8049072137755883
+              ],
+              [
+                0.009516368913464248,
+                0.008182289050891996,
+                0.02477641905134078,
+                0.006887611286947504,
+                0.0074432781850919125,
+                0.4620761493554892,
+                0.4811178834056773
+              ],
+              [
+                0.0005999344100723647,
+                0.003947106708819774,
+                0.001603900072516886,
+                0.009490291633665039,
+                0.001334071865212536,
+                0.5242597574029694,
+                0.45876493257635476
+              ],
+              [
+                0.0019342712790239602,
+                0.0007056523830397055,
+                0.0022224646596259844,
+                0.004205115367949474,
+                0.0025353277099566186,
+                0.2751854012124659,
+                0.7132117700564686
+              ],
+              [
+                0.00847433895454742,
+                0.0016041179039893905,
+                0.011418254339660053,
+                0.005552581469601137,
+                0.004986824360530591,
+                0.4098712160784862,
+                0.5580926467453718
+              ],
+              [
+                0.0010795320608303883,
+                0.002336145487061003,
+                0.00293064109504769,
+                0.0007786263230900658,
+                0.001797570888993505,
+                0.4990526759124987,
+                0.49202481074055415
+              ],
+              [
+                0.0007492614248167229,
+                0.0013507652371845325,
+                0.0011753162965419505,
+                0.00038588336078987595,
+                0.00016903400293784897,
+                0.5307469137162935,
+                0.4654228161426897
+              ],
+              [
+                0.0002337463156618469,
+                0.0009299336548428982,
+                0.0009375981786942589,
+                0.0007384489778360148,
+                0.00013787942354611004,
+                0.38121429965217546,
+                0.6158081137646417
+              ],
+              [
+                0.0007880187475529965,
+                0.000993330876226537,
+                0.0017600868916633771,
+                0.003567359998560278,
+                0.0006175560460542329,
+                0.369485161516568,
+                0.6227884586730943
+              ],
+              [
+                0.00040531436217861483,
+                0.00080106280533073,
+                0.0015671245151258973,
+                0.0005776279660858563,
+                0.0001654213641882052,
+                0.520380125575125,
+                0.4761033487413573
+              ],
+              [
+                0.00039130559538534725,
+                0.0003191947692539543,
+                0.0010300973783648716,
+                0.0013675793986237749,
+                0.00016977588341205775,
+                0.2953868467769522,
+                0.7013351785826565
+              ]
+            ]
+          },
+          "3": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                2.8454853870698572e-05,
+                2.650672106774721e-05,
+                7.342732586494982e-05,
+                3.0168969529995593e-05,
+                1.9415103724576e-05,
+                0.5541400937676002,
+                0.44568191576563543
+              ],
+              [
+                4.15771655525532e-05,
+                4.956504898871117e-05,
+                0.00010551182422418038,
+                0.00038197568572400086,
+                0.00016066526587650288,
+                0.4936197300297868,
+                0.5056409562444537
+              ],
+              [
+                1.3904504739343792e-05,
+                1.638161418602735e-05,
+                3.985200282592416e-05,
+                4.485999139212993e-05,
+                2.5241129217759005e-05,
+                0.5483279985152577,
+                0.4515317676421522
+              ],
+              [
+                3.8509995233368956e-05,
+                7.211202070436684e-05,
+                9.818122381716421e-05,
+                4.7090597528480774e-05,
+                6.375052398975178e-05,
+                0.7698660675281332,
+                0.22981426928409696
+              ],
+              [
+                0.000285812001998238,
+                0.00015871151022111006,
+                0.0004449060298816221,
+                0.0027727207831776467,
+                0.00034331789694078905,
+                0.42469280397879855,
+                0.571301727301049
+              ],
+              [
+                3.401730442035955e-05,
+                5.6421437394078565e-05,
+                0.00013403328532042734,
+                0.00016497130488517088,
+                6.097682990883868e-05,
+                0.706808967051138,
+                0.2927406132434075
+              ],
+              [
+                0.001176963763718959,
+                0.001403467520722188,
+                0.0037693640668294394,
+                0.0028573993413010612,
+                0.0009720974044466857,
+                0.23107073303811376,
+                0.7587499945584568
+              ],
+              [
+                0.006179502753075212,
+                0.0010323668224737049,
+                0.009681464332097676,
+                0.03882568126777187,
+                0.011856366144493223,
+                0.5303698375181011,
+                0.40205478177329496
+              ],
+              [
+                0.002804336614208296,
+                0.001721756414626725,
+                0.014614452885871288,
+                0.0016188911578683474,
+                0.0015007218241225929,
+                0.2474084330989899,
+                0.7303314056703676
+              ],
+              [
+                0.002147076645051129,
+                0.004283530749380589,
+                0.00812948943581432,
+                0.011296061139728409,
+                0.0030759047414176165,
+                0.4077034720774327,
+                0.5633644779591895
+              ],
+              [
+                0.0011581976419256534,
+                0.0010340328011807288,
+                0.0032810083324147856,
+                0.001542326874923674,
+                0.0015386440906877397,
+                0.37645286361259683,
+                0.6149929278316307
+              ],
+              [
+                0.01043845574837178,
+                0.004752559084445238,
+                0.022467378857545555,
+                0.003810928035672987,
+                0.008104750092606992,
+                0.471286622833577,
+                0.47913930358129164
+              ]
+            ]
+          },
+          "6": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.002104113131863414,
+                0.00041544962110492636,
+                0.0022397023523444658,
+                0.012985463000804885,
+                0.0028294912605269927,
+                0.44192402444365625,
+                0.537501745594418
+              ],
+              [
+                4.508542810697236e-05,
+                3.9655468815595895e-05,
+                0.00040517268823052176,
+                0.0009281179955262076,
+                0.00018751304233774135,
+                0.7510263021550472,
+                0.24736820574035723
+              ],
+              [
+                0.00025473166890151335,
+                0.0005632453568978236,
+                0.0009628525238440488,
+                0.00016055255116498302,
+                3.242945648935347e-05,
+                0.37652557398634684,
+                0.6215006260346309
+              ],
+              [
+                0.0013568358551128768,
+                0.0005986346161807887,
+                0.0020237119212106335,
+                0.003045572693372378,
+                0.0003615183943475131,
+                0.8079322209478346,
+                0.18468151447188574
+              ],
+              [
+                0.00019479616958960832,
+                0.0002216664636398491,
+                0.0005450100710550032,
+                0.0006833418320275086,
+                0.00019720748061445193,
+                0.24879585834978826,
+                0.7493621100357001
+              ],
+              [
+                2.0373320235904658e-05,
+                9.154467300049873e-06,
+                7.151498248703092e-05,
+                4.145268559796023e-05,
+                5.8612295620719124e-06,
+                0.5449529204228474,
+                0.45489868367392383
+              ],
+              [
+                5.0907097800632073e-05,
+                5.850438359505716e-05,
+                0.00011302266577539299,
+                0.00012792916518456821,
+                7.5380590337204e-05,
+                0.5781370540098377,
+                0.42143718281526993
+              ],
+              [
+                0.0004514936359737476,
+                0.00021824199096954545,
+                0.0007677788348564718,
+                0.002905170699723385,
+                0.0011602245942049195,
+                0.7737875015613338,
+                0.22070959080759764
+              ],
+              [
+                7.1310206414221254e-06,
+                1.20406314911925e-05,
+                8.984610513708413e-05,
+                6.7809759034958e-05,
+                2.6056766445883285e-05,
+                0.6410854890867054,
+                0.3587116257623746
+              ],
+              [
+                4.6367568336336264e-05,
+                1.3803642130199023e-05,
+                8.69564857883276e-05,
+                0.00012861950151059177,
+                0.0001765947774038068,
+                0.9863045430101833,
+                0.013243115890350758
+              ],
+              [
+                4.080777656980672e-05,
+                2.675214427259931e-05,
+                0.0001261055482693507,
+                9.75432705293855e-05,
+                0.00011396396474253833,
+                0.42344098266169555,
+                0.5761538459185372
+              ],
+              [
+                3.2859602920893846e-05,
+                2.2674003325562353e-05,
+                0.0002009011664101479,
+                7.348937910620635e-05,
+                9.293248370340735e-05,
+                0.5192795778732623,
+                0.48029757349458163
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "intervened": {
+      "counts": {
+        "missing_final": 25,
+        "missing_answer": 25
+      },
+      "attn_pre_final": {
+        "2": {
+          "final_answer": 0.0,
+          "question": 0.0,
+          "let_me_think": 0.0,
+          "numbers": 0.0,
+          "operators": 0.0,
+          "other": 0.0,
+          "generated": 0.0
+        },
+        "3": {
+          "final_answer": 0.0,
+          "question": 0.0,
+          "let_me_think": 0.0,
+          "numbers": 0.0,
+          "operators": 0.0,
+          "other": 0.0,
+          "generated": 0.0
+        },
+        "6": {
+          "final_answer": 0.0,
+          "question": 0.0,
+          "let_me_think": 0.0,
+          "numbers": 0.0,
+          "operators": 0.0,
+          "other": 0.0,
+          "generated": 0.0
+        }
+      },
+      "attn_pre_answer": {
+        "2": {
+          "final_answer": 0.0,
+          "question": 0.0,
+          "let_me_think": 0.0,
+          "numbers": 0.0,
+          "operators": 0.0,
+          "other": 0.0,
+          "generated": 0.0
+        },
+        "3": {
+          "final_answer": 0.0,
+          "question": 0.0,
+          "let_me_think": 0.0,
+          "numbers": 0.0,
+          "operators": 0.0,
+          "other": 0.0,
+          "generated": 0.0
+        },
+        "6": {
+          "final_answer": 0.0,
+          "question": 0.0,
+          "let_me_think": 0.0,
+          "numbers": 0.0,
+          "operators": 0.0,
+          "other": 0.0,
+          "generated": 0.0
+        }
+      },
+      "attn_end": {
+        "2": {
+          "final_answer": 0.0010186181526811804,
+          "question": 0.0020893795292370974,
+          "let_me_think": 0.003396800653098258,
+          "numbers": 0.0011681355675403446,
+          "operators": 0.0006119618349353335,
+          "other": 0.3493507643519914,
+          "generated": 0.6423643397402811
+        },
+        "3": {
+          "final_answer": 0.0035867256291394704,
+          "question": 0.001859617794412112,
+          "let_me_think": 0.00447263160444516,
+          "numbers": 0.0009511535633680018,
+          "operators": 0.0022260707310432634,
+          "other": 0.5288799252410284,
+          "generated": 0.4580238795230693
+        },
+        "6": {
+          "final_answer": 0.0016985032979786009,
+          "question": 0.0004917403035103032,
+          "let_me_think": 0.0010302034538179506,
+          "numbers": 0.0006483792877501725,
+          "operators": 0.00023651161092392463,
+          "other": 0.47393525545609755,
+          "generated": 0.5219594164968341
+        }
+      },
+      "logit_lens_pre_answer": [],
+      "logit_lens_end": [
+        {
+          "layer": 0,
+          "avg_logp": -10.945,
+          "avg_rank": 2005.64
+        },
+        {
+          "layer": 1,
+          "avg_logp": -19.854375,
+          "avg_rank": 72958.0
+        },
+        {
+          "layer": 2,
+          "avg_logp": -25.510625,
+          "avg_rank": 107629.76
+        },
+        {
+          "layer": 3,
+          "avg_logp": -30.015,
+          "avg_rank": 149093.8
+        },
+        {
+          "layer": 4,
+          "avg_logp": -25.795,
+          "avg_rank": 147167.72
+        },
+        {
+          "layer": 5,
+          "avg_logp": -23.63,
+          "avg_rank": 138949.56
+        },
+        {
+          "layer": 6,
+          "avg_logp": -19.755,
+          "avg_rank": 120447.12
+        },
+        {
+          "layer": 7,
+          "avg_logp": -23.535,
+          "avg_rank": 150138.52
+        },
+        {
+          "layer": 8,
+          "avg_logp": -21.474375,
+          "avg_rank": 143010.2
+        },
+        {
+          "layer": 9,
+          "avg_logp": -20.795,
+          "avg_rank": 141019.72
+        },
+        {
+          "layer": 10,
+          "avg_logp": -23.896875,
+          "avg_rank": 149662.24
+        },
+        {
+          "layer": 11,
+          "avg_logp": -20.430625,
+          "avg_rank": 132835.4
+        },
+        {
+          "layer": 12,
+          "avg_logp": -20.31,
+          "avg_rank": 134468.52
+        },
+        {
+          "layer": 13,
+          "avg_logp": -21.3975,
+          "avg_rank": 143354.32
+        },
+        {
+          "layer": 14,
+          "avg_logp": -22.585,
+          "avg_rank": 148100.56
+        },
+        {
+          "layer": 15,
+          "avg_logp": -21.165625,
+          "avg_rank": 141319.92
+        },
+        {
+          "layer": 16,
+          "avg_logp": -19.964375,
+          "avg_rank": 136137.4
+        },
+        {
+          "layer": 17,
+          "avg_logp": -21.2225,
+          "avg_rank": 139800.56
+        },
+        {
+          "layer": 18,
+          "avg_logp": -19.040625,
+          "avg_rank": 113828.44
+        },
+        {
+          "layer": 19,
+          "avg_logp": -18.720625,
+          "avg_rank": 75945.08
+        },
+        {
+          "layer": 20,
+          "avg_logp": -15.6878125,
+          "avg_rank": 14889.04
+        },
+        {
+          "layer": 21,
+          "avg_logp": -16.3646875,
+          "avg_rank": 23559.44
+        },
+        {
+          "layer": 22,
+          "avg_logp": -13.6659375,
+          "avg_rank": 15881.36
+        },
+        {
+          "layer": 23,
+          "avg_logp": -11.903125,
+          "avg_rank": 8042.92
+        },
+        {
+          "layer": 24,
+          "avg_logp": -11.1625,
+          "avg_rank": 2807.88
+        },
+        {
+          "layer": 25,
+          "avg_logp": -17.2778125,
+          "avg_rank": 10450.0
+        },
+        {
+          "layer": 26,
+          "avg_logp": -11.6228125,
+          "avg_rank": 798.04
+        },
+        {
+          "layer": 27,
+          "avg_logp": -11.830625,
+          "avg_rank": 131.88
+        }
+      ],
+      "head_by_phase": {
+        "pre_answer": {
+          "2": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "3": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "6": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        },
+        "end": {
+          "2": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                3.196958236003411e-05,
+                3.1912313934299165e-05,
+                0.0003420060691496474,
+                0.00015921628380965557,
+                0.00010479368760570652,
+                0.5670371565290725,
+                0.432292947296859
+              ],
+              [
+                5.987982287479099e-05,
+                0.0001865417044609785,
+                0.00045051307690300744,
+                0.00016889612497834606,
+                8.53753465344198e-05,
+                0.6218145077351437,
+                0.37723428427216277
+              ],
+              [
+                0.008760692924261093,
+                0.008733790665864945,
+                0.018019619025290014,
+                0.004158078499604017,
+                0.0044605721672996874,
+                0.6749093587690731,
+                0.2809578873642022
+              ],
+              [
+                1.1084599000241724e-05,
+                0.00018488831643480807,
+                0.0028956066183059193,
+                1.3272279210596594e-06,
+                4.0656859718524175e-06,
+                0.013147193035164016,
+                0.983755830781603
+              ],
+              [
+                4.8370944095950105e-05,
+                6.907010087161326e-05,
+                0.00041382976148952367,
+                5.3074523520990624e-05,
+                2.325251640741044e-05,
+                0.04753118245428141,
+                0.951861222393918
+              ],
+              [
+                0.0001879709133936558,
+                0.0006808084493968636,
+                0.0024801145738456397,
+                9.684170433502004e-05,
+                0.00024638476803374944,
+                0.42368155506986116,
+                0.5726263377580472
+              ],
+              [
+                0.0012714971098466777,
+                0.002347712272312492,
+                0.006041815969911113,
+                0.0013575553225564363,
+                0.0009519836906110868,
+                0.569767527946824,
+                0.41826190670421054
+              ],
+              [
+                0.0005846001112877275,
+                0.00198815003503114,
+                0.0012223008126602509,
+                0.0044675408105831595,
+                0.00045056692139041845,
+                0.37163315355484655,
+                0.6196536931018918
+              ],
+              [
+                0.00025783037553082976,
+                0.006239074038458057,
+                0.004119856620831115,
+                0.0007106394823222218,
+                0.0002271935470093922,
+                0.31515988147485474,
+                0.6732855281270207
+              ],
+              [
+                0.00030341210971528197,
+                0.0007668911514338106,
+                0.0011390427966762218,
+                0.0002273966767006641,
+                0.00018367765842413063,
+                0.08218505279393867,
+                0.9151945167666053
+              ],
+              [
+                0.0004259829614602495,
+                0.0019935587234795092,
+                0.0019098041212782845,
+                0.001757280600068043,
+                0.0004412162405969866,
+                0.20136154840889503,
+                0.7921105939084384
+              ],
+              [
+                0.00028012637834763155,
+                0.0018501565791666508,
+                0.001727098390838364,
+                0.0008597795540845254,
+                0.00016445978933916195,
+                0.30398105445194235,
+                0.6911373284084129
+              ]
+            ]
+          },
+          "3": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                4.148428160419826e-05,
+                4.658425997263293e-05,
+                8.154294369887794e-05,
+                0.0001415549877765443,
+                8.107776022939106e-05,
+                0.9003332616546615,
+                0.09927452289015001
+              ],
+              [
+                4.892186140068588e-06,
+                4.9555870702988615e-06,
+                8.934260953417095e-05,
+                1.0649913704980918e-05,
+                4.451415971615802e-06,
+                0.3190060758498536,
+                0.6808796148089611
+              ],
+              [
+                8.238274546759072e-06,
+                3.558688263720633e-06,
+                1.765503667201518e-05,
+                1.5204783402822385e-05,
+                4.5184459611435915e-06,
+                0.4195507771823891,
+                0.5804000487713666
+              ],
+              [
+                4.155283264395404e-07,
+                1.9496897040338634e-07,
+                6.1069089902161464e-06,
+                1.2815937170840285e-06,
+                2.996864145499156e-07,
+                0.3378557574786473,
+                0.6621359559677864
+              ],
+              [
+                1.5420385628885925e-05,
+                2.5043681653187377e-05,
+                4.1823207120614824e-05,
+                1.3947839923957873e-05,
+                1.1612400483898e-05,
+                0.3319129698262479,
+                0.6679791941047085
+              ],
+              [
+                1.863092270592559e-06,
+                1.541920827113463e-05,
+                1.759513823134995e-05,
+                3.5832416337058245e-05,
+                2.9526255547196456e-06,
+                0.05595340528016563,
+                0.9439729397803389
+              ],
+              [
+                0.0010086781237623654,
+                0.0007838675337552559,
+                0.002552308615995571,
+                0.000966546234121779,
+                0.0009324331837706267,
+                0.6494895424229616,
+                0.34426662763304194
+              ],
+              [
+                0.024402570676757024,
+                0.009687893374357373,
+                0.03472216970054433,
+                0.007225914342561737,
+                0.018109844154678284,
+                0.8102105841375306,
+                0.0956410290808708
+              ],
+              [
+                0.0011467258991069685,
+                0.0005720792671309028,
+                0.0028253927410696635,
+                0.0014453631395008415,
+                0.0008615566353546455,
+                0.4588251097512398,
+                0.5343237697551376
+              ],
+              [
+                0.004450335439032642,
+                0.0022300323261879385,
+                0.0019766612362582237,
+                0.00031281810071959626,
+                0.0012052391325414647,
+                0.4741095304069677,
+                0.5157153885468142
+              ],
+              [
+                0.00024192404475797957,
+                0.00030126147538339865,
+                0.000596897897648887,
+                8.460068027943635e-05,
+                0.00017111692093749298,
+                0.7527833580877951,
+                0.24582083919921557
+              ],
+              [
+                0.01171815961773973,
+                0.008644523161929102,
+                0.01074408321757801,
+                0.0011601287283701822,
+                0.00532774641062133,
+                0.8365287308138796,
+                0.1258766237384407
+              ]
+            ]
+          },
+          "6": {
+            "categories": [
+              "final_answer",
+              "question",
+              "let_me_think",
+              "numbers",
+              "operators",
+              "other",
+              "generated"
+            ],
+            "mean_mass": [
+              [
+                0.004560900588780896,
+                0.0011702349011875413,
+                0.005145686963805929,
+                0.005891149337985553,
+                0.0016435365652432666,
+                0.4932074814142834,
+                0.488380998467328
+              ],
+              [
+                0.00047678079941336547,
+                0.00023100640915799887,
+                0.00041992781643799046,
+                5.961569266403899e-06,
+                9.541678334983316e-06,
+                0.03425774208757005,
+                0.9645990433963925
+              ],
+              [
+                0.0003533971389799717,
+                0.0002837655163489217,
+                0.0007438781527162063,
+                0.00027722388207621404,
+                8.929888484999537e-05,
+                0.5374581658498471,
+                0.460794290395861
+              ],
+              [
+                0.0008794746192870662,
+                0.0006357480373117142,
+                0.0025732514541596174,
+                0.0010242212313460186,
+                0.0004347250363207422,
+                0.7578464213635016,
+                0.23660619071684777
+              ],
+              [
+                0.00010809171395834483,
+                0.0001634189272340336,
+                0.0007921435385651421,
+                0.0002254273249855032,
+                0.00021184439348871818,
+                0.5509790951831044,
+                0.4475199729839721
+              ],
+              [
+                6.53221368232515e-05,
+                1.8405329071349286e-05,
+                7.457699518056415e-05,
+                2.9196540726843522e-05,
+                1.4280514592428518e-05,
+                0.3859460671710191,
+                0.613852156142213
+              ],
+              [
+                7.063365467583793e-05,
+                2.7923976110173498e-05,
+                7.317584140582589e-06,
+                6.801851416327054e-07,
+                1.4969747572646241e-06,
+                0.3033894586923798,
+                0.6965024913264134
+              ],
+              [
+                0.006623050758303179,
+                0.0017847178959345912,
+                0.00050788890634891,
+                4.365824188141687e-06,
+                3.495966723448873e-05,
+                0.3193166437752163,
+                0.6717283925678794
+              ],
+              [
+                5.359592524463053e-05,
+                2.1850934891646245e-05,
+                3.054268622687907e-05,
+                4.051216516841316e-06,
+                8.005809840466726e-07,
+                0.0366019374331383,
+                0.963287229795569
+              ],
+              [
+                0.00684353867653499,
+                0.0013912203251675236,
+                0.0013277729522468461,
+                2.0961107566463964e-06,
+                3.89297604479566e-05,
+                0.891665786998704,
+                0.09873066537122753
+              ],
+              [
+                0.0002755005845767755,
+                8.586470393368018e-05,
+                0.0006973373173605068,
+                0.00021643693790792895,
+                0.00020430756982932506,
+                0.5136738704239048,
+                0.48484667139206833
+              ],
+              [
+                7.175297916489854e-05,
+                8.67266857744653e-05,
+                4.211707862623371e-05,
+                9.974129210434057e-05,
+                0.00015441770500387975,
+                0.8628803950805016,
+                0.13666489540623755
+              ]
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "summary": {
+    "avg_token_reduction": 23.1,
+    "avg_marker_reduction": 2.3,
+    "baseline_accuracy": 0.5,
+    "intervened_accuracy": 0.3,
+    "maintained_accuracy": 0.3,
+    "verdict": "WEAK"
+  },
+  "results": [
+    {
+      "problem": "What is 7 + 5?",
+      "expected_answer": "12",
+      "baseline": {
+        "text": "Step 1: We need to add the numbers 7 and 5 together.\n\nFinal answer: 7 + 5 = 12",
+        "tokens": 30,
+        "reasoning_markers": 3,
+        "extracted_answer": "7",
+        "correct": false
+      },
+      "intervened": {
+        "text": "Step 2:",
+        "tokens": 5,
+        "reasoning_markers": 1,
+        "extracted_answer": "2",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 25,
+        "marker_reduction": 2,
+        "maintained_correctness": false
+      }
+    },
+    {
+      "problem": "If Sarah has 20 dollars and spends 8, how much does she have left?",
+      "expected_answer": "12",
+      "baseline": {
+        "text": "Step 1: Sarah starts with 20 dollars.\n\nFinal answer: Sarah has 20 - 8 = 12 dollars left.",
+        "tokens": 31,
+        "reasoning_markers": 3,
+        "extracted_answer": "12",
+        "correct": true
+      },
+      "intervened": {
+        "text": "12 dollars.",
+        "tokens": 5,
+        "reasoning_markers": 0,
+        "extracted_answer": "12",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 26,
+        "marker_reduction": 3,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "What is 6 times 4?",
+      "expected_answer": "24",
+      "baseline": {
+        "text": "Step 1: Calculate the product of 6 and 4.\nFinal answer: 6 times 4 is 24.",
+        "tokens": 28,
+        "reasoning_markers": 4,
+        "extracted_answer": "6",
+        "correct": false
+      },
+      "intervened": {
+        "text": "Step 1:",
+        "tokens": 5,
+        "reasoning_markers": 1,
+        "extracted_answer": "1",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 23,
+        "marker_reduction": 3,
+        "maintained_correctness": false
+      }
+    },
+    {
+      "problem": "A square has side length 5. What is its area?",
+      "expected_answer": "25",
+      "baseline": {
+        "text": "Step 1: Recall the formula for the area of a square. The area \\( A \\) of a square with side length \\( s \\) is given by \\( A = s^2 \\).\n\nFinal answer: 25",
+        "tokens": 48,
+        "reasoning_markers": 3,
+        "extracted_answer": "25",
+        "correct": true
+      },
+      "intervened": {
+        "text": "Answer: 25",
+        "tokens": 6,
+        "reasoning_markers": 1,
+        "extracted_answer": "25",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 42,
+        "marker_reduction": 2,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If 2x = 14, what is x?",
+      "expected_answer": "7",
+      "baseline": {
+        "text": "Step 1: We start with the equation 2x = 14. Our goal is to solve for x.\n\nFinal answer: x = 7",
+        "tokens": 33,
+        "reasoning_markers": 4,
+        "extracted_answer": "7",
+        "correct": true
+      },
+      "intervened": {
+        "text": "Step 2:",
+        "tokens": 5,
+        "reasoning_markers": 1,
+        "extracted_answer": "2",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 28,
+        "marker_reduction": 3,
+        "maintained_correctness": false
+      }
+    },
+    {
+      "problem": "What is 100 divided by 4?",
+      "expected_answer": "25",
+      "baseline": {
+        "text": "Step 1: Divide 100 by 4.",
+        "tokens": 14,
+        "reasoning_markers": 1,
+        "extracted_answer": "4",
+        "correct": false
+      },
+      "intervened": {
+        "text": "Step 1: Divide 100 by 4.",
+        "tokens": 14,
+        "reasoning_markers": 1,
+        "extracted_answer": "4",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 0,
+        "marker_reduction": 0,
+        "maintained_correctness": false
+      }
+    },
+    {
+      "problem": "A triangle has angles 60 degrees, 60 degrees, and what is the third angle?",
+      "expected_answer": "60",
+      "baseline": {
+        "text": "Step 1: The sum of the angles in any triangle is always 180 degrees.\n\nFinal answer: 60 degrees",
+        "tokens": 28,
+        "reasoning_markers": 3,
+        "extracted_answer": "60",
+        "correct": true
+      },
+      "intervened": {
+        "text": "The sum of the angles in any triangle is always 180 degrees.\n\nStep 2:",
+        "tokens": 21,
+        "reasoning_markers": 1,
+        "extracted_answer": "2",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 7,
+        "marker_reduction": 2,
+        "maintained_correctness": false
+      }
+    },
+    {
+      "problem": "If Bob has 3 apples and Ann gives him 4 more, how many does Bob have?",
+      "expected_answer": "7",
+      "baseline": {
+        "text": "Step 1: Bob initially has 3 apples.\n\nFinal answer: Bob has 3 apples.",
+        "tokens": 21,
+        "reasoning_markers": 3,
+        "extracted_answer": "3",
+        "correct": false
+      },
+      "intervened": {
+        "text": "Step 2:",
+        "tokens": 5,
+        "reasoning_markers": 1,
+        "extracted_answer": "2",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 16,
+        "marker_reduction": 2,
+        "maintained_correctness": false
+      }
+    },
+    {
+      "problem": "What is the square root of 49?",
+      "expected_answer": "7",
+      "baseline": {
+        "text": "Step 1: We need to find the square root of 49.\n\nFinal answer: 7.",
+        "tokens": 23,
+        "reasoning_markers": 3,
+        "extracted_answer": "7",
+        "correct": true
+      },
+      "intervened": {
+        "text": "The square root of 49 is 7.",
+        "tokens": 12,
+        "reasoning_markers": 0,
+        "extracted_answer": "7",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 11,
+        "marker_reduction": 3,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If 5 + x = 13, what is x?",
+      "expected_answer": "8",
+      "baseline": {
+        "text": "Step 1: We start with the equation given in the question, which is 5 + x = 13. Our goal is to solve for x, so we need to isolate x on one side of the equation.\n\nFinal answer: x = 13 - 5",
+        "tokens": 58,
+        "reasoning_markers": 4,
+        "extracted_answer": "13",
+        "correct": false
+      },
+      "intervened": {
+        "text": "Step 2:",
+        "tokens": 5,
+        "reasoning_markers": 1,
+        "extracted_answer": "2",
+        "correct": false
+      },
+      "changes": {
+        "token_reduction": 53,
+        "marker_reduction": 3,
+        "maintained_correctness": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "config": {
+    "name": "v8_hardset",
+    "hook_point": "resid_post",
+    "layers": [
+      6,
+      2,
+      3
+    ],
+    "alpha": 1.0,
+    "patch_mode": "prompt_all",
+    "max_patch_steps": null,
+    "decoding": {
+      "name": "greedy",
+      "do_sample": false,
+      "temperature": 1.0,
+      "top_p": 1.0
+    }
+  },
+  "summary": {
+    "avg_token_reduction": 50.333333333333336,
+    "avg_marker_reduction": 1.0833333333333333,
+    "baseline_accuracy": 1.0,
+    "intervened_accuracy": 1.0,
+    "maintained_accuracy": 1.0,
+    "verdict": "MODERATE",
+    "marker_method": "enumerated_steps+step_word+connectors_v1"
+  },
+  "detailed_results": [
+    {
+      "problem": "If Alice has 12 apples, gives 5 to Bob, then buys 7 more, how many does she have now?",
+      "expected_answer": "14",
+      "baseline": {
+        "text": "Sure, let's break it down step by step:\n\n1. **Initial number of apples**: Alice starts with 12 apples.\n2. **Apples given to Bob**: Alice gives 5 apples to Bob. So, we subtract 5 from 12:\n   \\[\n   12 - 5 = 7\n   \\]\n   Now Alice has 7 apples.\n3. **Apples bought**: Alice then buys 7 more apples. So, we add 7 to the 7 apples she has left:\n   \\[\n   7 + 7 = 14\n   \\]\n   Now Alice has 14 apples.\n\nFinal answer: Alice has 14 apples now.",
+        "tokens": 148,
+        "reasoning_markers": 5,
+        "extracted_answer": "14",
+        "correct": true
+      },
+      "intervened": {
+        "text": "Alice starts with 12 apples. She gives 5 to Bob, so she has 12 - 5 = 7 apples left. Then she buys 7 more apples, so she now has 7 + 7 = 14 apples.",
+        "tokens": 54,
+        "reasoning_markers": 1,
+        "extracted_answer": "14",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 94,
+        "marker_reduction": 4,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "A store sold 18 items in the morning and 27 in the afternoon from 100. How many are left?",
+      "expected_answer": "55",
+      "baseline": {
+        "text": "Sure, let's break it down step by step:\n\n1. **Initial Total**: The store starts with 100 items.\n\n2. **Items Sold in the Morning**: The store sold 18 items in the morning.\n   - We subtract these 18 items from the initial total:\n     \\[\n     100 - 18 = 82\n     \\]\n   - So, after the morning sales, there are 82 items left.\n\n3. **Items Sold in the Afternoon**: The store then sold 27 items in the afternoon.\n   - We subtract these 27 items from the remaining 82 items:\n     \\[\n     82 - 27 = 55\n     \\]\n   - So, after the afternoon sales, there are 55 items left.\n\nTherefore, the final number of items left is 55.",
+        "tokens": 187,
+        "reasoning_markers": 6,
+        "extracted_answer": "55",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To find out how many items are left, we need to subtract the total number of items sold from the initial number of items.\n\n1. The initial number of items is 100.\n2. In the morning, 18 items were sold.\n3. In the afternoon, 27 items were sold.\n\nFirst, let's add the items sold in the morning and afternoon:\n18 (morning) + 27 (afternoon) = 45 items sold\n\nNow, subtract the total number of items sold from the initial number:\n100 (initial) - 45 (sold) = 55 items left\n\nSo, there are 55 items left.",
+        "tokens": 145,
+        "reasoning_markers": 4,
+        "extracted_answer": "55",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 42,
+        "marker_reduction": 2,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "A tank had 80 liters, used 1/4 of it, then added 10 liters. How many liters now?",
+      "expected_answer": "70",
+      "baseline": {
+        "text": "Sure, let's break down the problem step by step:\n\n1. **Initial amount in the tank**: The tank starts with 80 liters.\n\n2. **Used 1/4 of it**: To find out how much was used, we calculate 1/4 of 80 liters.\n   \\[\n   \\frac{1}{4} \\times 80 = 20 \\text{ liters}\n   \\]\n   So, 20 liters were used from the tank.\n\n3. **Amount left after usage**: Subtract the used amount from the initial amount.\n   \\[\n   80 - 20 = 60 \\text{ liters}\n   \\]\n   So, 60 liters are left in the tank after using 20 liters.\n\n4. **Added 10 liters**: Now, we add 10 liters to the remaining amount.\n   \\[\n   60 + 10 = 70 \\text{ liters}\n   \\]\n   So, after adding 10 liters, the tank now has 70 liters.\n\nFinal answer: 70 liters.",
+        "tokens": 234,
+        "reasoning_markers": 5,
+        "extracted_answer": "70",
+        "correct": true
+      },
+      "intervened": {
+        "text": "Sure, let's break it down:\n\n1. The tank initially has 80 liters.\n2. It used 1/4 of it, which means it used 80 * 1/4 = 20 liters.\n3. After using 20 liters, the tank has 80 - 20 = 60 liters left.\n4. Then, it added 10 liters to the remaining 60 liters.\n\nSo, the final amount of water in the tank is 60 + 10 = 70 liters.",
+        "tokens": 117,
+        "reasoning_markers": 5,
+        "extracted_answer": "70",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 117,
+        "marker_reduction": 0,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If 3x + 4 = 28, what is x?",
+      "expected_answer": "8",
+      "baseline": {
+        "text": "Sure, let's solve the equation step by step:\n\n1. Start with the given equation:\n   \\[\n   3x + 4 = 28\n   \\]\n\n2. To isolate the term with \\(x\\), we need to subtract 4 from both sides of the equation:\n   \\[\n   3x + 4 - 4 = 28 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   3x = 24\n   \\]\n\n3. Now, to solve for \\(x\\), we need to divide both sides of the equation by 3:\n   \\[\n   \\frac{3x}{3} = \\frac{24}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 8\n   \\]\n\nSo, the value of \\(x\\) is \\(8\\).\n\nFinal answer: \\(x = 8\\).",
+        "tokens": 200,
+        "reasoning_markers": 4,
+        "extracted_answer": "8",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To solve for x in the equation 3x + 4 = 28, we need to isolate x on one side of the equation. Here's how we can do it:\n\n1. First, we need to get rid of the 4 on the left side of the equation. We can do this by subtracting 4 from both sides of the equation:\n   3x + 4 - 4 = 28 - 4\n   3x = 24\n\n2. Now we have 3x = 24. To solve for x, we need to divide both sides of the equation by 3:\n   3x \u00f7 3 = 24 \u00f7 3\n   x = 8\n\nSo, x = 8.",
+        "tokens": 164,
+        "reasoning_markers": 3,
+        "extracted_answer": "8",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 36,
+        "marker_reduction": 1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If 5x - 10 = 35, what is x?",
+      "expected_answer": "9",
+      "baseline": {
+        "text": "Sure, let's solve the equation step by step:\n\n1. Start with the given equation:\n   \\[\n   5x - 10 = 35\n   \\]\n\n2. To isolate the term with \\(x\\), we need to add 10 to both sides of the equation:\n   \\[\n   5x - 10 + 10 = 35 + 10\n   \\]\n   Simplifying this, we get:\n   \\[\n   5x = 45\n   \\]\n\n3. Now, to solve for \\(x\\), we need to divide both sides of the equation by 5:\n   \\[\n   \\frac{5x}{5} = \\frac{45}{5}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 9\n   \\]\n\nSo, the solution is \\(x = 9\\).\n\nFinal answer: \\(x = 9\\).",
+        "tokens": 204,
+        "reasoning_markers": 4,
+        "extracted_answer": "9",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To solve for x in the equation 5x - 10 = 35, we need to isolate x on one side of the equation. Here's how we can do it:\n\n1. First, we want to get rid of the -10 on the left side. We can do this by adding 10 to both sides of the equation:\n   5x - 10 + 10 = 35 + 10\n   5x = 45\n\n2. Now we have 5x = 45. To solve for x, we need to divide both sides by 5:\n   5x \u00f7 5 = 45 \u00f7 5\n   x = 9\n\nSo, the solution is x = 9.",
+        "tokens": 166,
+        "reasoning_markers": 3,
+        "extracted_answer": "9",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 38,
+        "marker_reduction": 1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "A rectangle has length 12 and width 5. What is its perimeter?",
+      "expected_answer": "34",
+      "baseline": {
+        "text": "Sure, let's break down the problem step by step.\n\n1. **Identify the given dimensions:**\n   - Length of the rectangle: 12 units\n   - Width of the rectangle: 5 units\n\n2. **Recall the formula for the perimeter of a rectangle:**\n   The perimeter \\( P \\) of a rectangle is given by the formula:\n   \\[\n   P = 2 \\times (\\text{length} + \\text{width})\n   \\]\n\n3. **Substitute the given values into the formula:**\n   \\[\n   P = 2 \\times (12 + 5)\n   \\]\n\n4. **Perform the addition inside the parentheses:**\n   \\[\n   12 + 5 = 17\n   \\]\n\n5. **Multiply the result by 2:**\n   \\[\n   P = 2 \\times 17 = 34\n   \\]\n\n6. **State the final answer:**\n   The perimeter of the rectangle is 34 units.\n\nFinal answer: 34",
+        "tokens": 222,
+        "reasoning_markers": 7,
+        "extracted_answer": "34",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To find the perimeter of a rectangle, we use the formula:\n\n\\[ \\text{Perimeter} = 2 \\times (\\text{Length} + \\text{Width}) \\]\n\nGiven:\n- Length = 12\n- Width = 5\n\nNow, plug these values into the formula:\n\n\\[ \\text{Perimeter} = 2 \\times (12 + 5) \\]\n\nFirst, add the length and width:\n\n\\[ 12 + 5 = 17 \\]\n\nThen, multiply by 2:\n\n\\[ 2 \\times 17 = 34 \\]\n\nSo, the perimeter of the rectangle is 34 units.",
+        "tokens": 139,
+        "reasoning_markers": 2,
+        "extracted_answer": "34",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 83,
+        "marker_reduction": 5,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "You buy 3 items at $7 each and use a $5 coupon. What is the total cost?",
+      "expected_answer": "16",
+      "baseline": {
+        "text": "Sure, let's break down the problem step by step:\n\n1. **Calculate the total cost of the items before the coupon:**\n   - You buy 3 items at $7 each.\n   - Total cost = 3 items * $7/item = $21\n\n2. **Apply the coupon:**\n   - You use a $5 coupon.\n   - Total cost after applying the coupon = $21 - $5 = $16\n\nSo, the final total cost is $16.\n\nFinal answer: $16",
+        "tokens": 111,
+        "reasoning_markers": 3,
+        "extracted_answer": "16",
+        "correct": true
+      },
+      "intervened": {
+        "text": "Sure, let's break it down:\n\n1. First, calculate the total cost of the 3 items without the coupon:\n   3 items * $7/item = $21\n\n2. Next, subtract the $5 coupon from the total cost:\n   $21 - $5 = $16\n\nSo, the total cost after using the coupon is $16.",
+        "tokens": 79,
+        "reasoning_markers": 4,
+        "extracted_answer": "16",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 32,
+        "marker_reduction": -1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "A box has 6 rows of 7 chocolates. If you eat 10, how many are left?",
+      "expected_answer": "32",
+      "baseline": {
+        "text": "Sure, let's break it down step by step:\n\n1. **Determine the total number of chocolates in the box:**\n   - The box has 6 rows.\n   - Each row contains 7 chocolates.\n   - Therefore, the total number of chocolates is \\( 6 \\times 7 = 42 \\).\n\n2. **Subtract the number of chocolates eaten:**\n   - You eat 10 chocolates.\n   - So, the number of chocolates left is \\( 42 - 10 = 32 \\).\n\nFinal answer: 32 chocolates are left.",
+        "tokens": 123,
+        "reasoning_markers": 4,
+        "extracted_answer": "32",
+        "correct": true
+      },
+      "intervened": {
+        "text": "Sure, let's break it down:\n\n1. First, calculate the total number of chocolates in the box:\n   - There are 6 rows.\n   - Each row has 7 chocolates.\n   - So, the total number of chocolates is \\( 6 \\times 7 = 42 \\).\n\n2. Next, subtract the number of chocolates you ate from the total number of chocolates:\n   - You ate 10 chocolates.\n   - So, the number of chocolates left is \\( 42 - 10 = 32 \\).\n\nTherefore, there are 32 chocolates left.",
+        "tokens": 124,
+        "reasoning_markers": 5,
+        "extracted_answer": "32",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": -1,
+        "marker_reduction": -1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If you split 96 candies equally among 8 kids, then 2 kids leave. If you redistribute equally among the remaining kids, how many does each get?",
+      "expected_answer": "16",
+      "baseline": {
+        "text": "Sure, let's break down the problem step by step.\n\n1. **Initial Distribution:**\n   - We start with 96 candies.\n   - These candies are to be split equally among 8 kids.\n   - To find out how many candies each kid gets initially, we divide 96 by 8:\n     \\[\n     \\frac{96}{8} = 12\n     \\]\n   - Each kid gets 12 candies.\n\n2. **Kids Leaving:**\n   - 2 kids leave, so now there are 8 - 2 = 6 kids left.\n\n3. **Redistribution:**\n   - We need to redistribute the 96 candies equally among the remaining 6 kids.\n   - To find out how many candies each of the remaining kids gets, we divide 96 by 6:\n     \\[\n     \\frac{96}{6} = 16\n     \\]\n   - Each of the remaining kids gets 16 candies.\n\nSo, the final answer is: Each of the remaining kids gets 16 candies.",
+        "tokens": 226,
+        "reasoning_markers": 4,
+        "extracted_answer": "16",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To solve this problem, we need to follow these steps:\n\n1. **Determine the number of candies each kid gets initially:**\n   - We start with 96 candies and 8 kids.\n   - When we split the candies equally among the 8 kids, each kid gets \\( \\frac{96}{8} = 12 \\) candies.\n\n2. **Account for the kids who leave:**\n   - 2 kids leave, so now there are \\( 8 - 2 = 6 \\) kids left.\n\n3. **Determine how many candies each of the remaining kids gets:**\n   - We still have 96 candies to distribute among the 6 kids.\n   - Each of the remaining kids gets \\( \\frac{96}{6} = 16 \\) candies.\n\nSo, each of the remaining kids gets 16 candies.",
+        "tokens": 183,
+        "reasoning_markers": 3,
+        "extracted_answer": "16",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 43,
+        "marker_reduction": 1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "A train travels 120 miles in 3 hours and then 60 miles in 1 hour. What is its average speed for the whole trip?",
+      "expected_answer": "45",
+      "baseline": {
+        "text": "To find the average speed for the whole trip, we need to follow these steps:\n\n1. **Calculate the total distance traveled:**\n   - The train travels 120 miles in the first part of the trip.\n   - The train travels 60 miles in the second part of the trip.\n   - Total distance = 120 miles + 60 miles = 180 miles.\n\n2. **Calculate the total time taken:**\n   - The train takes 3 hours for the first part of the trip.\n   - The train takes 1 hour for the second part of the trip.\n   - Total time = 3 hours + 1 hour = 4 hours.\n\n3. **Calculate the average speed:**\n   - Average speed is given by the formula: \n     \\[\n     \\text{Average speed} = \\frac{\\text{Total distance}}{\\text{Total time}}\n     \\]\n   - Substituting the values we have:\n     \\[\n     \\text{Average speed} = \\frac{180 \\text{ miles}}{4 \\text{ hours}} = 45 \\text{ miles per hour}\n     \\]\n\nSo, the average speed for the whole trip is 45 miles per hour.",
+        "tokens": 262,
+        "reasoning_markers": 7,
+        "extracted_answer": "45",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To find the average speed for the whole trip, we need to calculate the total distance traveled and the total time taken, then divide the total distance by the total time.\n\n1. **Calculate the total distance:**\n   - The train travels 120 miles in the first part of the trip.\n   - The train travels 60 miles in the second part of the trip.\n   - Total distance = 120 miles + 60 miles = 180 miles.\n\n2. **Calculate the total time:**\n   - The train takes 3 hours for the first part of the trip.\n   - The train takes 1 hour for the second part of the trip.\n   - Total time = 3 hours + 1 hour = 4 hours.\n\n3. **Calculate the average speed:**\n   - Average speed = Total distance / Total time\n   - Average speed = 180 miles / 4 hours = 45 miles per hour.\n\nSo, the average speed for the whole trip is 45 miles per hour.",
+        "tokens": 218,
+        "reasoning_markers": 8,
+        "extracted_answer": "45",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 44,
+        "marker_reduction": -1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If 4x + 6 = 38, what is x?",
+      "expected_answer": "8",
+      "baseline": {
+        "text": "Sure, let's solve the equation step by step:\n\n1. Start with the given equation:\n   \\[\n   4x + 6 = 38\n   \\]\n\n2. Subtract 6 from both sides to isolate the term with \\(x\\):\n   \\[\n   4x + 6 - 6 = 38 - 6\n   \\]\n   Simplifying this gives:\n   \\[\n   4x = 32\n   \\]\n\n3. Now, divide both sides by 4 to solve for \\(x\\):\n   \\[\n   \\frac{4x}{4} = \\frac{32}{4}\n   \\]\n   Simplifying this gives:\n   \\[\n   x = 8\n   \\]\n\nSo, the solution is \\(x = 8\\).\n\nFinal answer: \\(x = 8\\).",
+        "tokens": 181,
+        "reasoning_markers": 4,
+        "extracted_answer": "8",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To solve for x in the equation 4x + 6 = 38, we need to isolate x on one side of the equation. Here's how we can do it:\n\n1. First, we need to get rid of the constant term on the left side of the equation. We can do this by subtracting 6 from both sides of the equation:\n   4x + 6 - 6 = 38 - 6\n   4x = 32\n\n2. Now we have 4x = 32. To solve for x, we need to divide both sides of the equation by 4:\n   4x \u00f7 4 = 32 \u00f7 4\n   x = 8\n\nSo, x = 8.",
+        "tokens": 164,
+        "reasoning_markers": 3,
+        "extracted_answer": "8",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 17,
+        "marker_reduction": 1,
+        "maintained_correctness": true
+      }
+    },
+    {
+      "problem": "If 2x - 5 = 9, what is x?",
+      "expected_answer": "7",
+      "baseline": {
+        "text": "Sure, let's solve the equation step by step:\n\n1. Start with the given equation:\n   \\[\n   2x - 5 = 9\n   \\]\n\n2. To isolate the term with \\(x\\), we need to get rid of the \\(-5\\) on the left side. We do this by adding 5 to both sides of the equation:\n   \\[\n   2x - 5 + 5 = 9 + 5\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = 14\n   \\]\n\n3. Now, to solve for \\(x\\), we need to divide both sides of the equation by 2:\n   \\[\n   \\frac{2x}{2} = \\frac{14}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 7\n   \\]\n\nSo, the solution is \\(x = 7\\).\n\nFinal answer: \\(x = 7\\).",
+        "tokens": 214,
+        "reasoning_markers": 4,
+        "extracted_answer": "7",
+        "correct": true
+      },
+      "intervened": {
+        "text": "To solve for x in the equation 2x - 5 = 9, we need to isolate x on one side of the equation. Here's how we can do it:\n\n1. First, we want to get rid of the -5 on the left side. To do this, we add 5 to both sides of the equation:\n   2x - 5 + 5 = 9 + 5\n   2x = 14\n\n2. Now we have 2x = 14. To solve for x, we need to divide both sides by 2:\n   2x \u00f7 2 = 14 \u00f7 2\n   x = 7\n\nSo, x = 7.",
+        "tokens": 155,
+        "reasoning_markers": 3,
+        "extracted_answer": "7",
+        "correct": true
+      },
+      "changes": {
+        "token_reduction": 59,
+        "marker_reduction": 1,
+        "maintained_correctness": true
+      }
+    }
+  ]
+}

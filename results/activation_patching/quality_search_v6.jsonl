@@ -1,0 +1,1 @@
+{"timestamp": "2026-01-01 00:17:30", "config": {"hook_point": "blocks.{layer}.hook_resid_post", "layers": [6, 2, 3], "alpha": 1.0, "max_new_tokens": 256}, "summary": {"avg_token_reduction": 23.1, "avg_marker_reduction": 2.3, "baseline_accuracy": 0.5, "intervened_accuracy": 0.3, "maintained_accuracy": 0.3, "verdict": "WEAK"}}
