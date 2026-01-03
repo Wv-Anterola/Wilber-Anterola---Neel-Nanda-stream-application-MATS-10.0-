@@ -300,7 +300,7 @@ def main():
     assess_intervention_quality(model, tokenizer, TEST_PROBLEMS, critical_heads)
 
     print("\n" + "=" * 70)
-    print("Next: run create_visualizations.py")
+    print("Next: run make_figures.py")
     print("=" * 70)
 
 

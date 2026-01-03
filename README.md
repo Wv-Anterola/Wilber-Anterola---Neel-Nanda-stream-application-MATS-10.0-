@@ -23,15 +23,15 @@ This repository contains the code, results, and figures from a study of reasonin
 ## Key Scripts
 
 - `code/setup_validation.py` — model setup and baseline vs reasoning validation
-- `code/layer_level_patching.py` — layer sweep for causal suppression
-- `code/head_level_analysis.py` — head‑level analysis
-- `code/measure_quality_v8_long_prompt.py` — main v8 intervention run
-- `code/measure_quality_v8_single_layers.py` — single‑layer ablations
-- `code/measure_quality_v8_hardset.py` — harder problem set test
-- `code/compare_prompt_activations.py` — v7 vs v8 prompt‑end activation comparison
-- `code/analyze_attention_categories.py` — prompt‑end attention category probe
-- `code/analyze_generation_phase.py` — generation‑phase probe (baseline vs intervened)
-- `code/create_visualizations.py` — figure generation from results
+- `code/layer_sweep.py` — layer sweep for causal suppression
+- `code/head_analysis.py` — head‑level analysis
+- `code/quality_assessment_v8.py` — main v8 intervention run
+- `code/quality_assessment_single_layers.py` — single‑layer ablations
+- `code/quality_assessment_hardset.py` — harder problem set test
+- `code/prompt_activation_compare.py` — v7 vs v8 prompt‑end activation comparison
+- `code/attention_category_analysis.py` — prompt‑end attention category probe
+- `code/generation_phase_analysis.py` — generation‑phase probe (baseline vs intervened)
+- `code/make_figures.py` — figure generation from results
 - `code/shared.py` — shared model and tokenization helpers
 - `code/problem_sets.py` — centralized problem lists
 
@@ -40,8 +40,8 @@ This repository contains the code, results, and figures from a study of reasonin
 Primary outputs are in `results/activation_patching/`.
 
 - `quality_assessment_v8.json` — main v8 run (25 problems)
-- `quality_assessment_v8_single_layers.json` — single‑layer ablations
-- `quality_assessment_v8_hardset.json` — hard set evaluation
+- `quality_assessment_single_layers.json` — single‑layer ablations
+- `quality_assessment_hardset.json` — hard set evaluation
 - `prompt_activation_comparison_v7_v8.json` — v7 vs v8 prompt‑end comparison
 - `generation_phase_probe.json` — generation‑phase probe outputs
 - `figures/` — plots used in the writeup

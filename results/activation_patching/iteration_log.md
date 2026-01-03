@@ -7,13 +7,13 @@
 ## 2026-01-01
 - v5 targeted patching: prompt-span patching + max patch steps; best config `prompt_all` still WEAK due to low maintained accuracy and coarse marker count (see `results/activation_patching/quality_assessment_v5.json`, `results/activation_patching/quality_search_v5.md`).
 - v6 prompt tuning: enforced "Step 1" + "Final answer"; outputs became brittle (e.g., "Step 2:" fragments) and accuracy dropped (see `results/activation_patching/quality_assessment_v6.json`).
-- v7 strong attempt (in progress): shortened reasoning prompt, required explicit "Final answer", increased `MAX_NEW_TOKENS` to avoid truncation, improved answer normalization, and switched marker counting to enumerated steps + step-word + connectors. Script: `measure_quality_v7_strong.py`. Pending run + results.
+- v7 strong attempt (in progress): shortened reasoning prompt, required explicit "Final answer", increased `MAX_NEW_TOKENS` to avoid truncation, improved answer normalization, and switched marker counting to enumerated steps + step-word + connectors. Script: `quality_assessment_v7.py`. Pending run + results.
 ## 2026-01-01 (continued)
 - v7 result: prompt shortening + improved scoring increased baseline correctness but intervention expanded outputs; avg token reduction negative, verdict WEAK (see `results/activation_patching/quality_assessment_v7.json`).
 - v8 result: reverted to long reasoning prompt, added explicit final answer, increased max tokens, improved scoring. Strong suppression recovered: avg token reduction 69.0, marker reduction 3.4, accuracy 10/10, verdict EFFECTIVE (see `results/activation_patching/quality_assessment_v8.json`).
 ## 2026-01-01 (expanded test set + stats)
 - Expanded v8 test set to 25 problems; reran Qwen2.5-1.5B-Instruct. Results: avg token reduction 78.68, marker reduction 3.12, baseline 23/25, intervened 25/25, maintained 23/25; verdict EFFECTIVE (see `results/activation_patching/quality_assessment_v8.json`).
-- Added paired t-tests via `compute_stats.py`: token reduction t=10.22, p=3.22e-10; marker reduction t=8.51, p=1.04e-8 (see `results/activation_patching/quality_stats.json`).
+- Added paired t-tests via `compute_quality_stats.py`: token reduction t=10.22, p=3.22e-10; marker reduction t=8.51, p=1.04e-8 (see `results/activation_patching/quality_stats.json`).
 - Attempted Qwen2.5-3B-Instruct with hf_xet; download succeeded but model load OOM on 8GB GPU.
 
 ## 2026-01-02 (prompt sensitivity + single-layer + head tests)

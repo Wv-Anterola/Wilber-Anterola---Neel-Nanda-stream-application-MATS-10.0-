@@ -279,7 +279,7 @@ def main():
         print(f"  Layer {layer:2d}: {avg_suppression_by_layer[layer]:+.1f} tokens")
 
     print("\n" + "=" * 70)
-    print("Next: run head_level_analysis.py")
+    print("Next: run head_analysis.py")
     print("=" * 70)
 
 

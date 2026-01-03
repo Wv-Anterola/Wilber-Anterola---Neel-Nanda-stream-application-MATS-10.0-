@@ -216,7 +216,7 @@ def main() -> int:
     try:
         validate_setup()
         print("\n" + "=" * 70)
-        print("Next: run layer_level_patching.py")
+        print("Next: run layer_sweep.py")
         print("=" * 70)
         return 0
     except Exception as exc:

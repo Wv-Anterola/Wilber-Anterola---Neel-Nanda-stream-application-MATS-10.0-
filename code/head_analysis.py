@@ -261,7 +261,7 @@ def main():
     identify_critical_heads(results, top_n=5)
 
     print("\n" + "=" * 70)
-    print("Next: run measure_quality.py")
+    print("Next: run quality_assessment_baseline.py")
     print("=" * 70)
 
 
